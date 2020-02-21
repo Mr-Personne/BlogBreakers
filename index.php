@@ -7,26 +7,28 @@
     </section>
 
     <section>
-        <?php
-        // echo "<br>";
-        // if (have_posts()) :
-        //     /* Start the Loop */
-        //     while (have_posts()) :
-        //         // the_title();
-        //         // the_content();
-        //         // the_post();
-        //         // echo "<br>";
-
-        //     endwhile;
-
-            
-
-        // else :
-
-        //     get_template_part('template-parts/post/content', 'none');
-
-        // endif;
+        
+       <?php
+        
+            if (have_posts()) :
+                /* Start the Loop */
+                while (have_posts()) : 
+                    // echo 'post';
+                    the_post();
+                    the_post_thumbnail();
+                    
         ?>
+                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2><small><?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
+        <?php
+                
+                endwhile;
+            else :
+
+                echo "<p>Sorry, there are no posts to display.</p>";
+
+            endif;
+        ?>
+        
     </section>
     <!-- FIN section sacha -->
 
