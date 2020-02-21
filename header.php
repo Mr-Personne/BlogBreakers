@@ -15,7 +15,7 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header>
+    <header class="site-header">
         <h1><?php bloginfo('name'); ?></h1>
         <nav>
             <!-- .navbar-header -->
