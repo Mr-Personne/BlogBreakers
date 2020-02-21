@@ -1,8 +1,5 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
-
-?>
 <main>
     <!-- section sacha -->
     <section>
@@ -11,23 +8,24 @@ get_header();
 
     <section>
         <?php
-        echo "<br>ptdr";
-        if (have_posts()) :
-            echo "<br>mdr";
-            /* Start the Loop */
-            while (have_posts()) :
-                the_post();
-                echo "<br>lol";
+        // echo "<br>";
+        // if (have_posts()) :
+        //     /* Start the Loop */
+        //     while (have_posts()) :
+        //         // the_title();
+        //         // the_content();
+        //         // the_post();
+        //         // echo "<br>";
 
-            endwhile;
+        //     endwhile;
 
             
 
-        else :
+        // else :
 
-            get_template_part('template-parts/post/content', 'none');
+        //     get_template_part('template-parts/post/content', 'none');
 
-        endif;
+        // endif;
         ?>
     </section>
     <!-- FIN section sacha -->
@@ -48,8 +46,5 @@ get_header();
     <!-- FIN section glenn -->
 
 </main>
-<?php
 
-get_footer();
-
-?>
+<?php get_footer(); ?>
