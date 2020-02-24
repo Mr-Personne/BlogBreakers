@@ -64,26 +64,26 @@ function projets_post_type()
 
     // Set UI labels for Custom Post Type
     $labels = array(
-        'name'                => _x('Projets', 'Post Type General Name', 'nisarg'),
-        'singular_name'       => _x('Projets', 'Post Type Singular Name', 'nisarg'),
-        'menu_name'           => __('Projets', 'nisarg'),
-        'parent_item_colon'   => __('Parent Projets', 'nisarg'),
-        'all_items'           => __('All Projets', 'nisarg'),
-        'view_item'           => __('View Projets', 'nisarg'),
-        'add_new_item'        => __('Add New Projets', 'nisarg'),
-        'add_new'             => __('Add New', 'nisarg'),
-        'edit_item'           => __('Edit Projets', 'nisarg'),
-        'update_item'         => __('Update Projets', 'nisarg'),
-        'search_items'        => __('Search Projets', 'nisarg'),
-        'not_found'           => __('Not Found', 'nisarg'),
-        'not_found_in_trash'  => __('Not found in Trash', 'nisarg'),
+        'name'                => _x('Projets', 'Post Type General Name', 'blogbreakers'),
+        'singular_name'       => _x('Projets', 'Post Type Singular Name', 'blogbreakers'),
+        'menu_name'           => __('Projets', 'blogbreakers'),
+        'parent_item_colon'   => __('Parent Projets', 'blogbreakers'),
+        'all_items'           => __('All Projets', 'blogbreakers'),
+        'view_item'           => __('View Projets', 'blogbreakers'),
+        'add_new_item'        => __('Add New Projets', 'blogbreakers'),
+        'add_new'             => __('Add New', 'blogbreakers'),
+        'edit_item'           => __('Edit Projets', 'blogbreakers'),
+        'update_item'         => __('Update Projets', 'blogbreakers'),
+        'search_items'        => __('Search Projets', 'blogbreakers'),
+        'not_found'           => __('Not Found', 'blogbreakers'),
+        'not_found_in_trash'  => __('Not found in Trash', 'blogbreakers'),
     );
 
     // Set other options for Custom Post Type
 
     $args = array(
-        'label'               => __('Projets', 'nisarg'),
-        'description'         => __('Projets news and reviews', 'nisarg'),
+        'label'               => __('Projets', 'blogbreakers'),
+        'description'         => __('Projets dans header', 'blogbreakers'),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
         //change support to change display of editor(???)
@@ -137,10 +137,10 @@ function projets_add_meta_boxes($post)
 function projets_build_meta_box($post)
 {
     // make sure the form request comes from WordPress
-	wp_nonce_field( basename( __FILE__ ), 'projets_meta_box_nonce' );
+    wp_nonce_field(basename(__FILE__), 'projets_meta_box_nonce');
 
-	// retrieve the _projets_url current value
-	$current_url = get_post_meta( $post->ID, '_projets_url', true );
+    // retrieve the _projets_url current value
+    $current_url = get_post_meta($post->ID, '_projets_url', true);
 ?>
     <div class='inside'>
         <h3><?php _e('Projet url', 'projets_example_plugin'); ?></h3>
@@ -163,25 +163,24 @@ function projets_save_meta_boxes_data($post_id)
 {
     // code here
     // verify taxonomies meta box nonce
-	if ( !isset( $_POST['projets_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['projets_meta_box_nonce'], basename( __FILE__ ) ) ){
-		return;
-	}
+    if (!isset($_POST['projets_meta_box_nonce']) || !wp_verify_nonce($_POST['projets_meta_box_nonce'], basename(__FILE__))) {
+        return;
+    }
 
-	// return if autosave
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ){
-		return;
-	}
+    // return if autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
 
-	// Check the user's permissions.
-	if ( ! current_user_can( 'edit_post', $post_id ) ){
-		return;
-	}
+    // Check the user's permissions.
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
     // store custom fields values
     // _projets_url string
     if (isset($_REQUEST['projet-url'])) {
         update_post_meta($post_id, '_projets_url', sanitize_text_field($_POST['projet-url']));
     }
-    
 }
 add_action('save_post_projets', 'projets_save_meta_boxes_data');
 
@@ -193,31 +192,31 @@ function equipiers_post_type()
 
     // Set UI labels for Custom Post Type
     $labels = array(
-        'name'                => _x('Équipers', 'Post Type General Name', 'nisarg'),
-        'singular_name'       => _x('Équipers', 'Post Type Singular Name', 'nisarg'),
-        'menu_name'           => __('Équipers', 'nisarg'),
-        'parent_item_colon'   => __('Parent Équipers', 'nisarg'),
-        'all_items'           => __('All Équipers', 'nisarg'),
-        'view_item'           => __('View Équipers', 'nisarg'),
-        'add_new_item'        => __('Add New Équipers', 'nisarg'),
-        'add_new'             => __('Add New', 'nisarg'),
-        'edit_item'           => __('Edit Équipers', 'nisarg'),
-        'update_item'         => __('Update Équipers', 'nisarg'),
-        'search_items'        => __('Search Équipers', 'nisarg'),
-        'not_found'           => __('Not Found', 'nisarg'),
-        'not_found_in_trash'  => __('Not found in Trash', 'nisarg'),
+        'name'                => _x('Équipiers', 'Post Type General Name', 'blogbreakers'),
+        'singular_name'       => _x('Équipiers', 'Post Type Singular Name', 'blogbreakers'),
+        'menu_name'           => __('Équipiers', 'blogbreakers'),
+        'parent_item_colon'   => __('Parent Équipiers', 'blogbreakers'),
+        'all_items'           => __('All Équipiers', 'blogbreakers'),
+        'view_item'           => __('View Équipiers', 'blogbreakers'),
+        'add_new_item'        => __('Add New Équipiers', 'blogbreakers'),
+        'add_new'             => __('Add New', 'blogbreakers'),
+        'edit_item'           => __('Edit Équipiers', 'blogbreakers'),
+        'update_item'         => __('Update Équipiers', 'blogbreakers'),
+        'search_items'        => __('Search Équipiers', 'blogbreakers'),
+        'not_found'           => __('Not Found', 'blogbreakers'),
+        'not_found_in_trash'  => __('Not found in Trash', 'blogbreakers'),
     );
 
     // Set other options for Custom Post Type
 
     $args = array(
-        'label'               => __('Équipers', 'nisarg'),
-        'description'         => __('Équipers news and reviews', 'nisarg'),
+        'label'               => __('Équipiers', 'blogbreakers'),
+        'description'         => __('Équipiers détails', 'blogbreakers'),
         'labels'              => $labels,
         // Features this CPT supports in Post Editor
         //change support to change display of editor(???)
         // 'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
-        'supports'            => array('title', 'thumbnail', 'excerpt'),
+        'supports'            => array('title', 'thumbnail'),
         // You can associate this CPT with a taxonomy or custom taxonomy. 
         // 'taxonomies'          => array('genres'),
         /* A hierarchical CPT is like Pages and can have
@@ -241,7 +240,7 @@ function equipiers_post_type()
     );
 
     // Registering your Custom Post Type
-    register_post_type('equipers', $args);
+    register_post_type('equipiers', $args);
 }
 
 /* Hook into the 'init' action so that the function
@@ -266,15 +265,33 @@ function equipiers_add_meta_boxes($post)
 function equipiers_build_meta_box($post)
 {
     // make sure the form request comes from WordPress
-	wp_nonce_field( basename( __FILE__ ), 'equipiers_meta_box_nonce' );
+    wp_nonce_field(basename(__FILE__), 'equipiers_meta_box_nonce');
 
-	// retrieve the _equipiers_url current value
-	$current_url = get_post_meta( $post->ID, '_equipiers_url', true );
+    // retrieve the _equipiers_nom current value
+    $current_nom = get_post_meta($post->ID, '_equipiers_nom', true);
+
+    // retrieve the _equipiers_prenom current value
+    $current_prenom = get_post_meta($post->ID, '_equipiers_prenom', true);
+
+    // retrieve the _equipiers_sous-titre current value
+    $current_sousTitre = get_post_meta($post->ID, '_equipiers_sous_titre', true);
 ?>
     <div class='inside'>
-        <h3><?php _e('equipier url', 'equipiers_example_plugin'); ?></h3>
+        <h3><?php _e('Nom', 'equipiers_example_plugin'); ?></h3>
         <p>
-            <input type="text" name="equipier-url" value="<?php echo $current_url ?>" />
+            <input type="text" name="nom" value="<?php echo $current_nom ?>" />
+        </p>
+    </div>
+    <div class='inside'>
+        <h3><?php _e('Prénom', 'equipiers_example_plugin'); ?></h3>
+        <p>
+            <input type="text" name="prenom" value="<?php echo $current_prenom ?>" />
+        </p>
+    </div>
+    <div class='inside'>
+        <h3><?php _e('Sous-titre', 'equipiers_example_plugin'); ?></h3>
+        <p>
+            <input type="text" name="sous-titre" value="<?php echo $current_sousTitre ?>" />
         </p>
     </div>
 <?php
@@ -292,25 +309,34 @@ function equipiers_save_meta_boxes_data($post_id)
 {
     // code here
     // verify taxonomies meta box nonce
-	if ( !isset( $_POST['equipiers_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['equipiers_meta_box_nonce'], basename( __FILE__ ) ) ){
-		return;
-	}
-
-	// return if autosave
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ){
-		return;
-	}
-
-	// Check the user's permissions.
-	if ( ! current_user_can( 'edit_post', $post_id ) ){
-		return;
-	}
-    // store custom fields values
-    // _equipiers_url string
-    if (isset($_REQUEST['equipier-url'])) {
-        update_post_meta($post_id, '_equipiers_url', sanitize_text_field($_POST['equipier-url']));
+    if (!isset($_POST['equipiers_meta_box_nonce']) || !wp_verify_nonce($_POST['equipiers_meta_box_nonce'], basename(__FILE__))) {
+        return;
     }
-    
+
+    // return if autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Check the user's permissions.
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+    // store custom fields values
+    // _equipiers_nom string
+    if (isset($_REQUEST['nom'])) {
+        update_post_meta($post_id, '_equipiers_nom', sanitize_text_field($_POST['nom']));
+    }
+
+    // _equipiers_prenom string
+    if (isset($_REQUEST['prenom'])) {
+        update_post_meta($post_id, '_equipiers_prenom', sanitize_text_field($_POST['prenom']));
+    }
+
+    // _equipiers_sous-titre string
+    if (isset($_REQUEST['sous-titre'])) {
+        update_post_meta($post_id, '_equipiers_sous_titre', sanitize_text_field($_POST['sous-titre']));
+    }
 }
 add_action('save_post_equipiers', 'equipiers_save_meta_boxes_data');
 // FIN section sacha
