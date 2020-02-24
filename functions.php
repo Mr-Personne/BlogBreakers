@@ -275,6 +275,12 @@ function equipiers_build_meta_box($post)
 
     // retrieve the _equipiers_sous-titre current value
     $current_sousTitre = get_post_meta($post->ID, '_equipiers_sous_titre', true);
+
+    // retrieve the _equipiers_github current value
+    $current_github = get_post_meta($post->ID, '_equipiers_github', true);
+
+    // retrieve the _equipiers_linkedin current value
+    $current_linkedin = get_post_meta($post->ID, '_equipiers_linkedin', true);
 ?>
     <div class='inside'>
         <h3><?php _e('Nom', 'equipiers_example_plugin'); ?></h3>
@@ -292,6 +298,19 @@ function equipiers_build_meta_box($post)
         <h3><?php _e('Sous-titre', 'equipiers_example_plugin'); ?></h3>
         <p>
             <input type="text" name="sous-titre" value="<?php echo $current_sousTitre ?>" />
+        </p>
+    </div>
+
+    <div class='inside'>
+        <h3><?php _e('Lien Github', 'equipiers_example_plugin'); ?></h3>
+        <p>
+            <input type="text" name="lien-github" value="<?php echo $current_github ?>" />
+        </p>
+    </div>
+    <div class='inside'>
+        <h3><?php _e('Lien LinkedIn', 'equipiers_example_plugin'); ?></h3>
+        <p>
+            <input type="text" name="lien-linkedin" value="<?php echo $current_linkedin ?>" />
         </p>
     </div>
 <?php
@@ -336,6 +355,16 @@ function equipiers_save_meta_boxes_data($post_id)
     // _equipiers_sous-titre string
     if (isset($_REQUEST['sous-titre'])) {
         update_post_meta($post_id, '_equipiers_sous_titre', sanitize_text_field($_POST['sous-titre']));
+    }
+
+    // _equipiers_lien-github string
+    if (isset($_REQUEST['lien-github'])) {
+        update_post_meta($post_id, '_equipiers_github', sanitize_text_field($_POST['lien-github']));
+    }
+
+    // _equipiers_lien-linkedin string
+    if (isset($_REQUEST['lien-linkedin'])) {
+        update_post_meta($post_id, '_equipiers_linkedin', sanitize_text_field($_POST['lien-linkedin']));
     }
 }
 add_action('save_post_equipiers', 'equipiers_save_meta_boxes_data');
