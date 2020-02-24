@@ -185,6 +185,134 @@ function projets_save_meta_boxes_data($post_id)
 }
 add_action('save_post_projets', 'projets_save_meta_boxes_data');
 
+
+
+
+function equipiers_post_type()
+{
+
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => _x('Équipers', 'Post Type General Name', 'nisarg'),
+        'singular_name'       => _x('Équipers', 'Post Type Singular Name', 'nisarg'),
+        'menu_name'           => __('Équipers', 'nisarg'),
+        'parent_item_colon'   => __('Parent Équipers', 'nisarg'),
+        'all_items'           => __('All Équipers', 'nisarg'),
+        'view_item'           => __('View Équipers', 'nisarg'),
+        'add_new_item'        => __('Add New Équipers', 'nisarg'),
+        'add_new'             => __('Add New', 'nisarg'),
+        'edit_item'           => __('Edit Équipers', 'nisarg'),
+        'update_item'         => __('Update Équipers', 'nisarg'),
+        'search_items'        => __('Search Équipers', 'nisarg'),
+        'not_found'           => __('Not Found', 'nisarg'),
+        'not_found_in_trash'  => __('Not found in Trash', 'nisarg'),
+    );
+
+    // Set other options for Custom Post Type
+
+    $args = array(
+        'label'               => __('Équipers', 'nisarg'),
+        'description'         => __('Équipers news and reviews', 'nisarg'),
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        //change support to change display of editor(???)
+        // 'supports'            => array('title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',),
+        'supports'            => array('title', 'thumbnail', 'excerpt'),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        // 'taxonomies'          => array('genres'),
+        /* A hierarchical CPT is like Pages and can have
+            * Parent and child items. A non-hierarchical CPT
+            * is like Posts.
+            */
+        'hierarchical'        => false,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => true,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'post',
+        'show_in_rest' => true,
+
+    );
+
+    // Registering your Custom Post Type
+    register_post_type('equipers', $args);
+}
+
+/* Hook into the 'init' action so that the function
+    * Containing our post type registration is not 
+    * unnecessarily executed. 
+    */
+
+add_action('init', 'equipiers_post_type', 0);
+
+
+
+function equipiers_add_meta_boxes($post)
+{
+    add_meta_box('equipiers_id', 'equipiers', 'equipiers_build_meta_box', 'equipiers');
+}
+
+/**
+ * Build custom field meta box
+ *
+ * @param post $post The post object
+ */
+function equipiers_build_meta_box($post)
+{
+    // make sure the form request comes from WordPress
+	wp_nonce_field( basename( __FILE__ ), 'equipiers_meta_box_nonce' );
+
+	// retrieve the _equipiers_url current value
+	$current_url = get_post_meta( $post->ID, '_equipiers_url', true );
+?>
+    <div class='inside'>
+        <h3><?php _e('equipier url', 'equipiers_example_plugin'); ?></h3>
+        <p>
+            <input type="text" name="equipier-url" value="<?php echo $current_url ?>" />
+        </p>
+    </div>
+<?php
+}
+
+add_action('add_meta_boxes_equipiers', 'equipiers_add_meta_boxes');
+
+
+/**
+ * Store custom field meta box data
+ *
+ * @param int $post_id The post ID.
+ */
+function equipiers_save_meta_boxes_data($post_id)
+{
+    // code here
+    // verify taxonomies meta box nonce
+	if ( !isset( $_POST['equipiers_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['equipiers_meta_box_nonce'], basename( __FILE__ ) ) ){
+		return;
+	}
+
+	// return if autosave
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ){
+		return;
+	}
+
+	// Check the user's permissions.
+	if ( ! current_user_can( 'edit_post', $post_id ) ){
+		return;
+	}
+    // store custom fields values
+    // _equipiers_url string
+    if (isset($_REQUEST['equipier-url'])) {
+        update_post_meta($post_id, '_equipiers_url', sanitize_text_field($_POST['equipier-url']));
+    }
+    
+}
+add_action('save_post_equipiers', 'equipiers_save_meta_boxes_data');
 // FIN section sacha
 
 
