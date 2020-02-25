@@ -1,35 +1,42 @@
         <footer>
-            <h3>Ceci n'est pas un footer</h3>
-            
+            <div class="container-fluid">
+                <div class="container pt-5 pb-5">
+                    <div class="row justify-content-between align-items-center">
 
-            <div style="display:flex; margin-right:50px;">
-                <!-- ajout de ma nouvelle widget area -->
-                <?php if (is_active_sidebar('widget-area-1')) : ?>
-                    <div style="margin-right:50px;">
-                        <?php dynamic_sidebar('widget-area-1'); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if (is_active_sidebar('widget-area-2')) : ?>
-                    <div style="margin-right:50px;">
-                        <?php dynamic_sidebar('widget-area-2'); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if (is_active_sidebar('widget-area-3')) : ?>
-                    <div style="margin-right:50px;">
-                        <?php dynamic_sidebar('widget-area-3'); ?>
-                    </div>
-                <?php endif; ?>
-                <!-- fin nouvelle widget area -->
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                            <!-- ajout de ma nouvelle widget area -->
+                            <?php if (is_active_sidebar('widget-area-1')) : ?>
+                                <?php dynamic_sidebar('widget-area-1'); ?>
+                            <?php endif; ?>
+                        </div>
 
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 ">
+                            <?php if (is_active_sidebar('widget-area-2')) : ?>
+                                <?php dynamic_sidebar('widget-area-2'); ?>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                            <?php if (is_active_sidebar('widget-area-3')) : ?>
+                                <?php dynamic_sidebar('widget-area-3'); ?>
+                            <?php endif; ?>
+                        </div>
+                        <!-- fin nouvelle widget area -->
+
+                    </div>
+
+                    <div class="row justify-content-center align-items-center pt-5 pb-5">
+                        <div class="col-12">
+                            <?php if (is_active_sidebar('widget-area-auteur')) : ?>
+                                <?php dynamic_sidebar('widget-area-auteur'); ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <p><?php //wp_list_authors(); ?></p>
-            <?php if (is_active_sidebar('widget-area-auteur')) : ?>
-                <div><?php dynamic_sidebar('widget-area-auteur'); ?></div>
-                <?php endif; ?>
         </footer>
 
         <?php wp_footer(); ?>
-        </body>
+    </body>
 
-        </html>
+</html>

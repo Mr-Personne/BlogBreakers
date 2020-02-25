@@ -48,9 +48,9 @@ function footer_widgets_init()
 
         'name' => 'Widget du footer 1',
         'id' => 'widget-area-1',
-        'before_widget' => '<div class="">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="">',
+        'before_widget' => '<p>',
+        'after_widget' => '</p>',
+        'before_title' => '<h3 class="footer-email">',
         'after_title' => '</h3>',
     ));
 
@@ -58,9 +58,9 @@ function footer_widgets_init()
 
         'name' => 'Widget du footer 2',
         'id' => 'widget-area-2',
-        'before_widget' => '<div class="">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="">',
+        'before_widget' => '<p>',
+        'after_widget' => '</p>',
+        'before_title' => '<h3 class="footer-telephone">',
         'after_title' => '</h3>',
     ));
 
@@ -68,9 +68,9 @@ function footer_widgets_init()
 
         'name' => 'Widget du footer 3',
         'id' => 'widget-area-3',
-        'before_widget' => '<div class="">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="">',
+        'before_widget' => '<p>',
+        'after_widget' => '</p>',
+        'before_title' => '<h3 class="footer-adresse">',
         'after_title' => '</h3>',
     ));
 
@@ -78,8 +78,8 @@ function footer_widgets_init()
 
         'name' => 'Widget du footer - Auteur',
         'id' => 'widget-area-auteur',
-        'before_widget' => '<div class="">',
-        'after_widget' => '</div>',
+        'before_widget' => '<p class="text-center font-weight-bold">',
+        'after_widget' => '</p>',
     ));
 }
 
