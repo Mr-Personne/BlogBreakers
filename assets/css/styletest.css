@@ -1,0 +1,36 @@
+
+@font-face{ 
+	font-family: 'bernadette-webfont';
+    src: url('../font/bernadette-webfont.woff') format('woff');
+    src: url('../font/bernadette-webfont.woff2') format('woff2');
+    }
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+    --font-color: #282828;
+  }
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+.font-color-dark{
+    color: var(--font-color) !important;
+}
+.font-bernadette{
+    font-family: 'bernadette-webfont';
+}
+.bg-header{
+    background-image: url(../images/gitbreakers-bg-header.png);
+    height: 110vh;
+}
+.gitbreakers-h1{
+    font-size: 6rem;
+    padding-top: 20%;
+}
+nav a{
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+}
+nav a:hover{
+    border-bottom: 10px #f87e47 solid;
+    padding-bottom: 50px;
+}
