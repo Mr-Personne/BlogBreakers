@@ -46,12 +46,32 @@ function footer_widgets_init()
 
     register_sidebar(array(
 
-        'name' => 'Widget du footer',
-        'id' => 'new-widget-area',
-        'before_widget' => '<div class="nwa-widget">',
+        'name' => 'Widget du footer 1',
+        'id' => 'widget-area-1',
+        'before_widget' => '<div class="">',
         'after_widget' => '</div>',
-        'before_title' => '<h2 class="nwa-title">',
-        'after_title' => '</h2>',
+        'before_title' => '<h3 class="">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
+
+        'name' => 'Widget du footer 2',
+        'id' => 'widget-area-2',
+        'before_widget' => '<div class="">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
+
+        'name' => 'Widget du footer 3',
+        'id' => 'widget-area-3',
+        'before_widget' => '<div class="">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="">',
+        'after_title' => '</h3>',
     ));
 }
 
