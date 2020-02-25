@@ -66,5 +66,24 @@ nav a:hover{
 
 
 /* section footer */
+.footer-email::before{
+    content: url("../images/icon-lettre.png");
+    position: absolute;
+    left: -70px;
+    top: 15px;
+}
 
+.footer-telephone::before{
+    content: url("../images/icon-telephone.png");
+    position: absolute;
+    left: -50px;
+    top: 10px;
+}
+
+.footer-adresse::before{
+    content: url("../images/icon-adresse.png");
+    position: absolute;
+    left: -50px;
+    top: 10px;
+}
 /* FIN section footer */
