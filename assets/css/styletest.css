@@ -88,11 +88,33 @@
 
 
 /* section "Get in touch" (logos reseaux sociaux) */
-
+.getintouch{
+    height: 300px;
+    background: linear-gradient(90deg, #de813c, #de813c 30%, #3f519a 80%, #3f519a);
+}
 /* FIN section "Get in touch" (logos reseaux sociaux) */
 
 
 
 /* section footer */
+.footer-email::before{
+    content: url("../images/icon-lettre.png");
+    position: absolute;
+    left: -70px;
+    top: 15px;
+}
 
+.footer-telephone::before{
+    content: url("../images/icon-telephone.png");
+    position: absolute;
+    left: -50px;
+    top: 10px;
+}
+
+.footer-adresse::before{
+    content: url("../images/icon-adresse.png");
+    position: absolute;
+    left: -50px;
+    top: 10px;
+}
 /* FIN section footer */
