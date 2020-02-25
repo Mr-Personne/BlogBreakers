@@ -7,28 +7,66 @@
     </section>
 
     <section>
-        
-       <?php
-        
-            if (have_posts()) :
-                /* Start the Loop */
-                while (have_posts()) : 
-                    // echo 'post';
-                    the_post();
-                    the_post_thumbnail();
-                    
-        ?>
-                    <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2><small><?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
+
         <?php
-                    the_content();   
-                endwhile;
-            else :
 
-                echo "<p>Sorry, there are no posts to display.</p>";
+        if (have_posts()) :
+            /* Start the Loop */
+            while (have_posts()) :
+                // echo 'post';
+                the_post();
+                the_post_thumbnail();
 
-            endif;
         ?>
-        
+                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2><small><?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
+        <?php
+                the_content();
+            endwhile;
+        else :
+
+            echo "<p>Sorry, there are no posts to display.</p>";
+
+        endif;
+        ?>
+
+    </section>
+
+    <section>
+        <?php
+        $args = array(
+            'post_type' => 'equipiers',
+            'post_status' => 'publish'
+        );
+
+        $idArray = array();
+
+        $my_query = new WP_Query($args);
+
+        if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+
+                // the_title();
+                array_push($idArray, get_the_ID());
+
+            endwhile;
+        endif;
+
+        // print_r($idArray);
+        ?>
+
+        <div class="d-flex">
+            <p>-------------------------------------------------------------------------------</p>
+
+            <?php
+            foreach ($idArray as $id) {
+                $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
+                $current_nom = get_post_meta($id, '_equipiers_nom', true);
+                echo "<p>". $current_prenom ." ". $current_nom ." </p> ";
+                $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
+                echo "<p>" . $current_sousTitre . "</p>";
+            }
+            ?>
+            <p>-------------------------------------------------------------------------------</p>
+        </div>
     </section>
     <!-- FIN section sacha -->
 
