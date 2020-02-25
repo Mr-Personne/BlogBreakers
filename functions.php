@@ -73,6 +73,14 @@ function footer_widgets_init()
         'before_title' => '<h3 class="">',
         'after_title' => '</h3>',
     ));
+
+    register_sidebar(array(
+
+        'name' => 'Widget du footer - Auteur',
+        'id' => 'widget-area-auteur',
+        'before_widget' => '<div class="">',
+        'after_widget' => '</div>',
+    ));
 }
 
 add_action('widgets_init', 'footer_widgets_init');
