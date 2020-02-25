@@ -22,6 +22,12 @@
     background-image: url(../images/gitbreakers-bg-header.png);
     height: 110vh;
 }
+.bg-automotive{
+    background-image: url(../images/auto-mockup.png);
+    background-position: center;
+    height: 150px;
+    width: 300px;
+}
 .gitbreakers-h1{
     font-size: 6rem;
     padding-top: 20%;
