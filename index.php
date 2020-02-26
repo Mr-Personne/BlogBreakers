@@ -7,20 +7,29 @@
     </section>
 
     <section>
-
         <?php
 
         if (have_posts()) :
             /* Start the Loop */
             while (have_posts()) :
-                // echo 'post';
                 the_post();
-                the_post_thumbnail();
-
-        ?>
-                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2><small><?php the_time('F jS, Y') ?> by <?php the_author() ?> </small>
+                ?>
+                
+        <div class="container-fluid pt-10 pb-120px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h3 class="font-bernadette display-4"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                        <?php the_content(); ?>
+                    </div>
+                    <div class="col-6">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php
-                the_content();
+        
             endwhile;
         else :
 
@@ -60,7 +69,7 @@
             foreach ($idArray as $id) {
                 $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
                 $current_nom = get_post_meta($id, '_equipiers_nom', true);
-                echo "<p>". $current_prenom ." ". $current_nom ." </p> ";
+                echo "<p>" . $current_prenom . " " . $current_nom . " </p> ";
                 $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
                 echo "<p>" . $current_sousTitre . "</p>";
             }
