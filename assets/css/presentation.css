@@ -1,0 +1,13 @@
+.bg-gradiant{
+    background-image:url(../images/degradé.png);
+    background-position: center;
+   
+}
+
+
+.bg-avatar{
+    background-image: url(../images/franck.png);
+background-position: center;
+width: 100vw;
+height: 400px;
+}
