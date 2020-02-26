@@ -27,6 +27,21 @@
 .bg-automotive{
     background-image: url(../images/auto-mockup.png);
     background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+}
+.bg-dashboard{
+    background-image: url(../images/dashboard-mockup.png);
+    background-position: center;
+    background-size: contain;
+    height: 150px;
+    width: 100%;
+}
+.bg-king-burger{
+    background-image: url(../images/king-burger.png);
+    background-position: center;
+    background-size: contain;
     height: 150px;
     width: 100%;
 }
@@ -52,9 +67,6 @@
 .no-gutter{
     padding-left: 0;
     padding-right: 0;
-}
-.projet{
-    box-shadow: -2px 86px 36px 10px rgba(171,154,171,0.6);
 }
 .nav-hover{
     padding-bottom: 50px;
