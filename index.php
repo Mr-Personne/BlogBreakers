@@ -15,7 +15,7 @@
                 the_post();
                 ?>
                 
-        <div class="container-fluid pt-10 pb-120px">
+        <div class="container-fluid mt-10 pt-120px pb-120px bg-article">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
