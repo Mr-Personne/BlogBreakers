@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="row justify-content-center align-items-center pt-5 pb-5">
-                        <div class="col-12">
+                        <div class="col-12 text-center font-weight-bold">
                             <?php if (is_active_sidebar('widget-area-auteur')) : ?>
                                 <?php dynamic_sidebar('widget-area-auteur'); ?>
                             <?php endif; ?>
