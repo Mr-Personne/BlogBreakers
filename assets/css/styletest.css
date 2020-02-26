@@ -75,7 +75,17 @@
 
 
 /* section Articles */
+.pt-10{
+    padding-top: 20rem;
+}
 
+.pb-120px{
+    padding-bottom: 120px;
+}
+
+.pt-120px{
+    padding-top: 120px;
+}
 /* FIN section Articles */
 
 
