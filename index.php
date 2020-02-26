@@ -7,7 +7,7 @@
             <div class="container">
                 <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
                 <div class="row justify-content-around">
-                <?php
+                    <?php
                     $args = array(
                         'post_type' => 'projets',
                         'post_status' => 'publish'
@@ -19,25 +19,29 @@
 
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
-                            // the_title();
-                            array_push($idArray, get_the_ID());
-
+                    ?>
+                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                        <div class="bg-default radius-border-top">
+                            <?php 
+                                if (has_post_thumbnail()) {
+                                    $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                                    echo '<img src="' . $image_src[0]  . '" width="100%" height="100%"  />';
+                                } 
+                            ?>
+                        </div>
+                        <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
+                        <p class="text-center"><?php the_excerpt(); ?></p>
+                        <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
+                        <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                    </div>
+                    <?php
                         endwhile;
                     endif;
 
-                    // print_r($idArray);
                     ?>
-
-                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
-
-                        <?php
-                            foreach ($idArray as $id) {
-                                $current_url = get_post_meta($id, '_projets_url', true);
-                                echo "<div><p>" . $current_url . "</p></div>";
-                            }
-                        ?>
-                    </div>
-                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                    
+                
+                    <!-- <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
                         <div class="bg-automotive radius-border-top"></div>
                         <h4 class="text-center font-weight-bold pt-3 pb-3">Automotive</h4>
                         <p class="text-center">Projet réalisé dans le cadre d'un projet étudiant : réalisation de la maquette, de l'intégration du site. Technologies utilisées : HTML SCSS.</p>
@@ -54,7 +58,7 @@
                         <h4 class="text-center font-weight-bold pt-3 pb-3">Le King-Burger</h4>
                         <p class="text-center">Projet réalisé dans le cadre d'un projet étudiant : réalisation de la maquette, de l'intégration du site. Technologies utilisées : HTML SCSS.</p>
                         <button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -172,15 +176,20 @@
     <section>
 
         <div class="container-fluid getintouch">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="font-bernadette text-center text-white p-5">Get in Touch</h3>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col-12">
-                    <p></p>
+                    <h3 class="title-getintouch font-bernadette text-center text-white p-5">Get in Touch</h3>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 justify-content-around d-flex pt-5">
+                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook">
+                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/twitter-logo.png" alt="logo-twitter">
+                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin">
+                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github">
+                    </div>
                 </div>
             </div>
         </div>

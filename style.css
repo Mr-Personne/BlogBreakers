@@ -20,6 +20,15 @@ body{
     background-color: black;
     color: rgb(0, 0, 0);
 }
+
+.bg-default{
+    background-color: white;
+    background-image: url('./assets/images/logo-blogbreakers.png');
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 100%;
+}
 /* FIN section sacha */
 
 
@@ -154,8 +163,20 @@ body{
 
 /* section "Get in touch" (logos reseaux sociaux) */
 .getintouch{
-    height: 300px;
+    height: 400px;
     background: linear-gradient(90deg, #de813c, #de813c 30%, #3f519a 80%, #3f519a);
+}
+.title-getintouch{
+    font-size: 2rem;
+}
+.social-media{
+    width: 80px;
+    height: 80px;
+}
+.social-media:hover, .social-media:focus{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    transition: all 2s linear;
 }
 /* FIN section "Get in touch" (logos reseaux sociaux) */
 
