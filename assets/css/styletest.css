@@ -87,8 +87,11 @@
 
 
 /* section Articles */
-.pt-10{
-    padding-top: 20rem;
+.bg-article{
+    background-color: #f4f4f4;
+}
+.mt-10{
+    margin-top: 20rem;
 }
 
 .pb-120px{
