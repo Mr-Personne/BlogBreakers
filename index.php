@@ -29,19 +29,21 @@
         // print_r($idArray);
         ?>
 
-        <div class="d-flex">
-            <p>-------------------------------------------------------------------------------</p>
-
-            <?php
-            foreach ($idArray as $id) {
-                $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
-                $current_nom = get_post_meta($id, '_equipiers_nom', true);
-                echo "<p>" . $current_prenom . " " . $current_nom . " </p> ";
-                $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
-                echo "<p>" . $current_sousTitre . "</p>";
-            }
-            ?>
-            <p>-------------------------------------------------------------------------------</p>
+        <div class="d-flex mt-5 justify-content-between">
+            <p>-------------------------------------------------</p>
+            
+                <?php
+                foreach ($idArray as $id) {
+                    $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
+                    $current_nom = get_post_meta($id, '_equipiers_nom', true);
+                    echo "<div><p>" . $current_prenom . " " . $current_nom . " </p> ";
+                    $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
+                    echo "<p>" . $current_sousTitre . "</p></div>";
+                }
+                ?>
+                
+            
+            <p>-------------------------------------------------</p>
         </div>
     </section>
     <!-- FIN section notre équipe -->
@@ -134,12 +136,12 @@
 
 
     <!-- section carte -->
-    <?php 
-        $longi = 6.1518422;
-        $lati = 47.6369051;
+    <?php
+    $longi = 6.1518422;
+    $lati = 47.6369051;
     ?>
     <section>
-        <?php echo do_shortcode("[blogMap longitude='".$longi."' latitude='".$lati."']"); ?>
+        <?php echo do_shortcode("[blogMap longitude='" . $longi . "' latitude='" . $lati . "']"); ?>
     </section>
     <!-- FIN section carte -->
 
