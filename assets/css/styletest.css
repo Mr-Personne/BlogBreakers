@@ -1,10 +1,11 @@
-
+/* Header */
 @font-face{ 
 	font-family: 'bernadette-webfont';
     src: url('../font/bernadette-webfont.woff') format('woff');
     src: url('../font/bernadette-webfont.woff2') format('woff2');
     }
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 
 :root {
     --font-color: #282828;
@@ -76,6 +77,7 @@
     border-bottom: 10px #f87e47 solid;
     padding-bottom: 33px;
 }
+/* fin header */
 
 
 
@@ -114,9 +116,23 @@
 
 /* section "Get in touch" (logos reseaux sociaux) */
 .getintouch{
-    height: 300px;
+    height: 400px;
     background: linear-gradient(90deg, #de813c, #de813c 30%, #3f519a 80%, #3f519a);
 }
+.title-getintouch{
+    font-size: 2rem;
+}
+.social-media{
+    width: 80px;
+    height: 80px;
+}
+.social-media:hover, .social-media:focus{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    transition: all 2s linear;
+}
+
+
 /* FIN section "Get in touch" (logos reseaux sociaux) */
 
 
