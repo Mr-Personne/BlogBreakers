@@ -19,8 +19,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h3 class="font-bernadette display-4"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                        <h3 class="font-bernadette display-4"><?php the_title(); ?></h3>
                         <?php the_content(); ?>
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                     </div>
                     <div class="col-6">
                         <?php the_post_thumbnail(); ?>
