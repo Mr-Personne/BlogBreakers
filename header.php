@@ -5,6 +5,8 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <!-- install a plugin for meta and open graph setup (yoast?)-->
+    
     <title><?php bloginfo('name'); ?> <?php wp_title('-'); ?></title>
 
     <!-- bloginfo() info : https://developer.wordpress.org/reference/functions/bloginfo/ -->
@@ -18,18 +20,51 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header class="site-header">
+    <!-- <header class="site-header">
         <h1><?php bloginfo('name'); ?></h1>
-        <nav>
+        <nav> -->
             <!-- .navbar-header -->
-			<?php if ( has_nav_menu( 'primary' ) ) {
-				wp_nav_menu( array(
-					'theme_location'    => 'primary',
-					'container'         => 'div',
-					'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-					'menu_class'        => 'primary-menu',
-                ) ); } 
+            <?php 
+            // if ( has_nav_menu( 'primary' ) ) {
+			// 	wp_nav_menu( array(
+			// 		'theme_location'    => 'primary',
+			// 		'container'         => 'div',
+			// 		'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+			// 		'menu_class'        => 'primary-menu',
+            //     ) ); } 
                 
             ?>
-        </nav>
+        <!-- </nav>
+    </header> -->
+    
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg font-montserrat text-decoration-none">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-2">
+                    <!-- <a class="nav-item text-decoration-none" href="#"><img src=""
+                            alt="logo blogbreakers" width="158" height="97"></a> -->
+                    <?php echo the_custom_logo(); ?>
+                </div>
+                <div class="col-2">
+                    <a class="nav-item nav-hover text-decoration-none text-center font-color-dark" href="#">Accueil</a>
+                </div>
+                <div class="col-2">
+                    <a class="nav-item nav-hover text-decoration-none text-center font-color-dark" href="#">Projets</a>
+                </div>
+                <div class="col-2">
+                    <a class="nav-item nav-hover text-decoration-none text-center font-color-dark" href="#">Notre
+                        équipe</a>
+                </div>
+                <div class="col-2">
+                    <a class="nav-item nav-hover text-decoration-none text-center font-color-dark" href="#">Blog</a>
+                </div>
+                <div class="col-2">
+                    <a class="nav-item nav-hover text-decoration-none text-center font-color-dark" href="#">Contact</a>
+                </div>
+            </nav>
+        </div>
     </header>

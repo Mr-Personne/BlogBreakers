@@ -34,6 +34,13 @@ body{
 
 
 /* section glenn */
+@font-face{ 
+	font-family: 'bernadette-webfont';
+    src: url('../font/bernadette-webfont.woff') format('woff');
+    src: url('../font/bernadette-webfont.woff2') format('woff2');
+    }
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 :root {
     --font-color: #282828;
 }
@@ -47,14 +54,29 @@ body{
     font-family: 'bernadette-webfont';
 }
 .bg-header{
-    background-image: url(../images/gitbreakers-bg-header.png);
+    background-image: url(assets/images/gitbreakers-bg-header.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 110vh;
 }
 .bg-automotive{
-    background-image: url(../images/auto-mockup.png);
+    background-image: url(assets/images/auto-mockup.png);
     background-position: center;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+}
+.bg-dashboard{
+    background-image: url(assets/images/dashboard-mockup.png);
+    background-position: center;
+    background-size: contain;
+    height: 150px;
+    width: 100%;
+}
+.bg-king-burger{
+    background-image: url(assets/images/king-burger.png);
+    background-position: center;
+    background-size: contain;
     height: 150px;
     width: 100%;
 }
@@ -81,9 +103,6 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
-.projet{
-    box-shadow: -2px 86px 36px 10px rgba(171,154,171,0.6);
-}
 .nav-hover{
     padding-bottom: 50px;
     font-size: 1.5rem;
@@ -92,6 +111,8 @@ body{
     border-bottom: 10px #f87e47 solid;
     padding-bottom: 33px;
 }
+
+
 /* FIN section glenn */
 
 /* section notre équipe */
@@ -105,8 +126,12 @@ body{
 .bg-article{
     background-color: #f4f4f4;
 }
+.mt-30{
+    margin-top: 30rem;
+}
+
 .mt-10{
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
 
 .pb-120px{

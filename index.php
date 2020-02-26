@@ -3,11 +3,65 @@
 <main>
     <!-- section sacha -->
     <section>
-        Laws of physics cosmic fugue billions upon billions Vangelis vastness is bearable only through love preserve and cherish that pale blue dot. Descended from astronomers made in the interiors of collapsing stars extraplanetary venture Orion's sword a very small stage in a vast cosmic arena? Decipherment with pretty stories for which there's little good evidence descended from astronomers citizens of distant epochs white dwarf stirred by starlight. Take root and flourish kindling the energy hidden in matter extraordinary claims require extraordinary evidence across the centuries finite but unbounded descended from astronomers and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+        <div class="container-fluid bg-header">
+            <div class="container">
+                <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
+                <div class="row justify-content-around">
+                <?php
+                    $args = array(
+                        'post_type' => 'projets',
+                        'post_status' => 'publish'
+                    );
+
+                    $idArray = array();
+
+                    $my_query = new WP_Query($args);
+
+                    if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+
+                            // the_title();
+                            array_push($idArray, get_the_ID());
+
+                        endwhile;
+                    endif;
+
+                    // print_r($idArray);
+                    ?>
+
+                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+
+                        <?php
+                            foreach ($idArray as $id) {
+                                $current_url = get_post_meta($id, '_projets_url', true);
+                                echo "<div><p>" . $current_url . "</p></div>";
+                            }
+                        ?>
+                    </div>
+                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                        <div class="bg-automotive radius-border-top"></div>
+                        <h4 class="text-center font-weight-bold pt-3 pb-3">Automotive</h4>
+                        <p class="text-center">Projet réalisé dans le cadre d'un projet étudiant : réalisation de la maquette, de l'intégration du site. Technologies utilisées : HTML SCSS.</p>
+                        <button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button>
+                    </div>
+                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                        <div class="bg-dashboard radius-border-top"></div>
+                        <h4 class="text-center font-weight-bold pt-3 pb-3">Dashboard</h4>
+                        <p class="text-center">Projet réalisé dans le cadre d'un projet étudiant : réalisation de la maquette, de l'intégration du site. Technologies utilisées : HTML SCSS.</p>
+                        <button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button>
+                    </div>
+                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                        <div class="bg-king-burger radius-border-top"></div>
+                        <h4 class="text-center font-weight-bold pt-3 pb-3">Le King-Burger</h4>
+                        <p class="text-center">Projet réalisé dans le cadre d'un projet étudiant : réalisation de la maquette, de l'intégration du site. Technologies utilisées : HTML SCSS.</p>
+                        <button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- section notre équipe -->
-    <section>
+    <section class="mt-30">
         <?php
         $args = array(
             'post_type' => 'equipiers',
@@ -29,20 +83,20 @@
         // print_r($idArray);
         ?>
 
-        <div class="d-flex mt-5 justify-content-between">
+        <div class="d-flex justify-content-between">
             <p>-------------------------------------------------</p>
-            
-                <?php
-                foreach ($idArray as $id) {
-                    $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
-                    $current_nom = get_post_meta($id, '_equipiers_nom', true);
-                    echo "<div><p>" . $current_prenom . " " . $current_nom . " </p> ";
-                    $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
-                    echo "<p>" . $current_sousTitre . "</p></div>";
-                }
-                ?>
-                
-            
+
+            <?php
+            foreach ($idArray as $id) {
+                $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
+                $current_nom = get_post_meta($id, '_equipiers_nom', true);
+                echo "<div><p>" . $current_prenom . " " . $current_nom . " </p> ";
+                $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
+                echo "<p>" . $current_sousTitre . "</p></div>";
+            }
+            ?>
+
+
             <p>-------------------------------------------------</p>
         </div>
     </section>
