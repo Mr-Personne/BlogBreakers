@@ -47,13 +47,6 @@ body{
 
 
 /* section glenn */
-@font-face{ 
-	font-family: 'bernadette-webfont';
-    src: url('../font/bernadette-webfont.woff') format('woff');
-    src: url('../font/bernadette-webfont.woff2') format('woff2');
-    }
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 :root {
     --font-color: #282828;
 }
@@ -138,7 +131,7 @@ body{
 /* section Articles */
 .bg-thumbnail{
     width: 800px;
-    /* height: 500px; */
+    height: 430px;
     /* background-image: url(./assets/images/github-logo.png);
     background-position: center;
     background-repeat: no-repeat; */
@@ -171,7 +164,7 @@ body{
 }
 
 .content-box{
-    height : 300px;
+    height : 250px;
     overflow-y: hidden;
     width: 700px
 }
