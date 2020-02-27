@@ -103,15 +103,14 @@ nav a:hover{
 .testimonial .name {
   font-size: 15px;
   font-weight: bold;
-  color: white;
   text-transform: capitalize;
   margin: 10px 0 5px 0;
 }
 
 .testimonial .title {
   display: block;
-  font-size: 14px;
-  color: #ffd9b8;
+  font-size: 29px;
+  color: linear-gradient(90deg, rgba(248,126,71,1) 0%, rgba(52,58,64,1) 50%, rgba(74,84,148,1) 100%);
 }
 
 .owl-controls {
