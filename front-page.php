@@ -92,16 +92,19 @@
 
         if (have_posts()) :
             /* Start the Loop */
-            while (have_posts()) :
+            $count = 0;
+            while (have_posts() && $count < 3) :
                 the_post();
+                $count++;
+                // echo $count;
         ?>
                 <!-- Si l'artcile A une image à la une fait :  -->
                 <?php
                 if (has_post_thumbnail()) {
                     $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
                 ?>
-                    <div class="container-fluid pt-120px mb-5 pb-120px bg-article d-flex pr-0">
-                        <div class="container">
+                    <div class="container-fluid mb-5 mt-10 d-flex pr-0 pl-0">
+                        <div class="container bg-article">
                             <div class="row">
 
                                 <div class="col-12 pl-200px">
@@ -111,11 +114,6 @@
                                     </div>
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                                 </div>
-                                <!-- <div class="col-6"> -->
-                                <?php
-                                // echo '<img src="' . $image_src[0]  . '" width="100%"  />';
-                                ?>
-                                <!-- </div> -->
 
 
                             </div>
@@ -128,33 +126,31 @@
                 } else {
 
                 ?>
-                    <div class="container-fluid pt-120px mb-5 pb-120px bg-article d-flex pr-0">
-                        <!-- <div class="container"> -->
-                            <div class="row">
-                                <div class="col-12 pl-200px pr-200px">
-                                    <h3 class="font-bernadette display-2 mb-5"><?php the_title(); ?></h3>
-                                    <div class="content-box-full">
-                                        <?php the_content(); ?>
-                                    </div>
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                    <div class="container-fluid mb-5 pb-5 mt-10 bg-article d-flex pr-0 pl-0">
+                        <div class="row">
+                            <div class="col-12 pl-200px pr-200px">
+                                <h3 class="font-bernadette display-2 mb-5"><?php the_title(); ?></h3>
+                                <div class="content-box-full">
+                                    <?php the_content(); ?>
                                 </div>
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                             </div>
                         </div>
                     </div>
                 <?php
-
+                
                 }
 
                 ?>
-                    <?php
+        <?php
 
-                endwhile;
-            else :
+            endwhile;
+        else :
 
-                echo "<p>Sorry, there are no posts to display.</p>";
+            echo "<p>Sorry, there are no posts to display.</p>";
 
-            endif;
-                    ?>
+        endif;
+        ?>
 
     </section>
     <!-- FIN section Articles -->
