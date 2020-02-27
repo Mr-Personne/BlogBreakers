@@ -6,7 +6,7 @@
 // section fayçal
 $(document).ready(function() {
   $("#testimonial-slider").owlCarousel({
-    items: 3,
+    items: 4,
     itemsDesktop:[1000,3],
     itemsDesktopSmall:[979,2],
     itemsTablet:[768, 2],
