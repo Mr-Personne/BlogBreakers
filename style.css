@@ -16,6 +16,10 @@
 
 
 /* section sacha */
+main {
+    overflow-x: hidden;
+}
+
 body{
     background-color: black;
     color: rgb(0, 0, 0);
@@ -132,6 +136,13 @@ body{
 
 
 /* section Articles */
+.bg-skill{
+    width: 800px;
+    /* height: 500px; */
+    /* background-image: url(./assets/images/github-logo.png);
+    background-position: center;
+    background-repeat: no-repeat; */
+}
 .bg-article{
     background-color: #f4f4f4;
 }
@@ -149,6 +160,25 @@ body{
 
 .pt-120px{
     padding-top: 120px;
+}
+
+.pl-200px{
+    padding-left: 200px;
+}
+
+.pr-200px{
+    padding-right: 200px;
+}
+
+.content-box{
+    height : 300px;
+    overflow-y: hidden;
+    width: 700px
+}
+
+.content-box-full{
+    height : 300px;
+    overflow-y: hidden;
 }
 /* FIN section Articles */
 

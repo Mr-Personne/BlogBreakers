@@ -20,27 +20,27 @@
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
                     ?>
-                    <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
-                        <div class="bg-default radius-border-top">
-                            <?php 
-                                if (has_post_thumbnail()) {
-                                    $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-                                    echo '<img src="' . $image_src[0]  . '" width="100%" height="100%"  />';
-                                } 
-                            ?>
-                        </div>
-                        <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
-                        <p class="text-center"><?php the_excerpt(); ?></p>
-                        <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
-                        <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
-                    </div>
+                            <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                                <div class="bg-default radius-border-top">
+                                    <?php
+                                    if (has_post_thumbnail()) {
+                                        $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                                        echo '<img src="' . $image_src[0]  . '" width="100%" height="100%"  />';
+                                    }
+                                    ?>
+                                </div>
+                                <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
+                                <p class="text-center"><?php the_excerpt(); ?></p>
+                                <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
+                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                            </div>
                     <?php
                         endwhile;
                     endif;
 
                     ?>
-                    
-                
+
+
                     <!-- <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
                         <div class="bg-automotive radius-border-top"></div>
                         <h4 class="text-center font-weight-bold pt-3 pb-3">Automotive</h4>
@@ -115,58 +115,66 @@
             while (have_posts()) :
                 the_post();
         ?>
+                <!-- Si l'artcile A une image à la une fait :  -->
+                <?php
+                if (has_post_thumbnail()) {
+                    $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                ?>
+                    <div class="container-fluid pt-120px mb-5 pb-120px bg-article d-flex pr-0">
+                        <div class="container">
+                            <div class="row">
 
-                <div class="container-fluid pt-120px mb-5 pb-120px bg-article">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Si l'artcile A une image à la une fait :  -->
-                            <?php
-                            if (has_post_thumbnail()) {
-                                $image_src = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-                            ?>
-                                <div class="col-6">
-                                    <h3 class="font-bernadette display-2 mb-5"><?php the_title(); ?></h3>
-                                    <?php the_content(); ?>
+                                <div class="col-12 pl-200px">
+                                    <h3 class="font-bernadette display-4 mb-5"><?php the_title(); ?></h3>
+                                    <div class="content-box">
+                                        <?php the_content(); ?>
+                                    </div>
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                                 </div>
-                                <div class="col-6">
-                                    <?php //the_post_thumbnail(); 
-                                    ?>
-                                    <?php
-                                    echo '<img src="' . $image_src[0]  . '" width="100%"  />';
-                                    ?>
-                                </div>
+                                <!-- <div class="col-6"> -->
+                                <?php
+                                // echo '<img src="' . $image_src[0]  . '" width="100%"  />';
+                                ?>
+                                <!-- </div> -->
 
-                                <!-- Si l'artcile N'A PAS d'image à la une fait :  -->
-                            <?php
 
-                            } else {
+                            </div>
+                        </div>
+                        <div class="bg-skill"><?php echo '<img src="' . $image_src[0]  . '" width="100%" height="100%" />'; ?></div>
+                    </div>
+                    <!-- Si l'artcile N'A PAS d'image à la une fait :  -->
+                <?php
 
-                            ?>
+                } else {
 
-                                <div class="col-12">
+                ?>
+                    <div class="container-fluid pt-120px mb-5 pb-120px bg-article d-flex pr-0">
+                        <!-- <div class="container"> -->
+                            <div class="row">
+                                <div class="col-12 pl-200px pr-200px">
                                     <h3 class="font-bernadette display-2 mb-5"><?php the_title(); ?></h3>
-                                    <?php the_content(); ?>
+                                    <div class="content-box-full">
+                                        <?php the_content(); ?>
+                                    </div>
                                     <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                                 </div>
-
-                            <?php
-
-                            }
-
-                            ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-        <?php
+                <?php
 
-            endwhile;
-        else :
+                }
 
-            echo "<p>Sorry, there are no posts to display.</p>";
+                ?>
+                    <?php
 
-        endif;
-        ?>
+                endwhile;
+            else :
+
+                echo "<p>Sorry, there are no posts to display.</p>";
+
+            endif;
+                    ?>
 
     </section>
     <!-- FIN section Articles -->
