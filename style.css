@@ -136,7 +136,7 @@ body{
 
 
 /* section Articles */
-.bg-skill{
+.bg-thumbnail{
     width: 800px;
     /* height: 500px; */
     /* background-image: url(./assets/images/github-logo.png);
@@ -176,10 +176,9 @@ body{
     width: 700px
 }
 
-.content-box-full{
+/* .content-box-full{
     height : 300px;
-    overflow-y: hidden;
-}
+} */
 /* FIN section Articles */
 
 

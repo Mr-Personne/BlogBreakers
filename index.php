@@ -140,7 +140,7 @@
 
                             </div>
                         </div>
-                        <div class="bg-skill"><?php echo '<img src="' . $image_src[0]  . '" width="100%" height="100%" />'; ?></div>
+                        <div class="bg-thumbnail"><?php echo '<img src="' . $image_src[0]  . '" width="100%" height="100%" />'; ?></div>
                     </div>
                     <!-- Si l'artcile N'A PAS d'image à la une fait :  -->
                 <?php
