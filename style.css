@@ -16,6 +16,10 @@
 
 
 /* section sacha */
+main {
+    overflow-x: hidden;
+}
+
 body{
     background-color: black;
     color: rgb(0, 0, 0);
@@ -43,13 +47,6 @@ body{
 
 
 /* section glenn */
-@font-face{ 
-	font-family: 'bernadette-webfont';
-    src: url('../font/bernadette-webfont.woff') format('woff');
-    src: url('../font/bernadette-webfont.woff2') format('woff2');
-    }
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
 :root {
     --font-color: #282828;
 }
@@ -132,6 +129,13 @@ body{
 
 
 /* section Articles */
+.bg-thumbnail{
+    width: 800px;
+    height: 430px;
+    /* background-image: url(./assets/images/github-logo.png);
+    background-position: center;
+    background-repeat: no-repeat; */
+}
 .bg-article{
     background-color: #f4f4f4;
 }
@@ -149,6 +153,25 @@ body{
 
 .pt-120px{
     padding-top: 120px;
+}
+
+.pl-200px{
+    padding-left: 200px;
+}
+
+.pr-200px{
+    padding-right: 200px;
+}
+
+.content-box{
+    height : 250px;
+    overflow-y: hidden;
+    width: 700px
+}
+
+.content-box-full{
+    height : 300px;
+    overflow-y: hidden;
 }
 /* FIN section Articles */
 
