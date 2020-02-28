@@ -37,7 +37,10 @@ nav a:hover{
 
 
 /* section notre équipe */
-
+.bg-grid{
+  background-color: antiquewhite;
+  height: 10%;
+}
 .testimonial {
   /* background-color: white; */
   text-align: center;
@@ -50,7 +53,7 @@ nav a:hover{
 .testimonial::after {
   content: "";
   border-top: 40px solid white;
-  border-right: 125px solid transparent;
+  /* border-right: 125px solid transparent; */
   position: absolute;
   bottom: -40px;
   left: 0;
@@ -58,7 +61,7 @@ nav a:hover{
 
 .testimonial::after {
   border-right: none;
-  border-left: 125px solid transparent;
+  /* border-left: 125px solid transparent; */
   left: auto;
   right: 0;
 }
@@ -87,7 +90,7 @@ nav a:hover{
 
 .testimonial .pic {
   display: inline-block;
-  border: 10px solid white;
+  /* border: 10px solid white; */
   border-radius: 50%;
   z-index: 1;
   height: 220px;
