@@ -3,7 +3,7 @@
 <main>
     <!-- section sacha -->
     <section>
-        <div class="container-fluid bg-header">
+        <div class="container-fluid bg-header mb-350px">
             <div class="container">
                 <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
                 <div class="row justify-content-around">
@@ -44,8 +44,9 @@
         </div>
     </section>
 
+    <!-- section DEPRESSION -->
     <!-- section notre équipe -->
-    <section class="mt-30">
+    <section>
         <?php
         $args = array(
             'post_type' => 'equipiers',
@@ -67,24 +68,38 @@
         // print_r($idArray);
         ?>
 
-        <div class="d-flex justify-content-between">
-            <p>-------------------------------------------------</p>
+        <div class="container-fluid demo">
+            <div class="container">
+                <div class="row">
+                    <div id="testimonial-slider" class="owl-carousel">
 
-            <?php
-            foreach ($idArray as $id) {
-                $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
-                $current_nom = get_post_meta($id, '_equipiers_nom', true);
-                echo "<div><p>" . $current_prenom . " " . $current_nom . " </p> ";
-                $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
-                echo "<p>" . $current_sousTitre . "</p></div>";
-            }
-            ?>
+                        <?php
+                        foreach ($idArray as $id) {
+                            $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
+                            $current_nom = get_post_meta($id, '_equipiers_nom', true);
+                            $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
+                        ?>
 
+                            <div class="testimonial">
+                                <div class="testimonial-content">
+                                    <div class="pic">
+                                        <img src="wp-content/themes/blogbreakers/assets/images/manu-233x233.jpg" alt="">
+                                    </div>
+                                    <h3 class="name"><?php echo $current_prenom . " " . $current_nom; ?></h3>
+                                    <span class="title"><?php echo $current_sousTitre; ?></span>
+                                </div>
+                            </div>
 
-            <p>-------------------------------------------------</p>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- FIN section notre équipe -->
+    <!-- FIN section DEPRESSION (pas vraiment...) -->
 
     <!-- section Articles -->
     <section class="mt-10">
@@ -138,7 +153,7 @@
                         </div>
                     </div>
                 <?php
-                
+
                 }
 
                 ?>
@@ -209,6 +224,8 @@
     <!-- section glenn -->
 
     <!-- FIN section glenn -->
+
+
 
 </main>
 
