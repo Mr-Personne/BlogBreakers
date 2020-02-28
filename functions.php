@@ -29,17 +29,26 @@ if (function_exists('add_theme_support')) {
 function bootstrap_scripts_enqueue()
 {
     // all styles
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css');
+    wp_register_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+    wp_register_style('bootstrap-theme-css', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css');
+    wp_register_style('bootstrap-all-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 
-    wp_enqueue_style('blogBreakers-style', get_stylesheet_uri());
+    wp_register_style('blogBreakers-style', get_stylesheet_uri());
+
+    // wp_enqueue_style('bootstrap-css');
+    // wp_enqueue_style('bootstrap-theme-css');
+    // wp_enqueue_style('blogBreakers-style');
 
     // all scripts
-    // wp_enqueue_script( 'jquery-3-js', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
-    // wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/npm.js');
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/script.js');
+    // wp_register_script( 'jquery-3-js', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
+    // wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_register_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_register_script('npm-js', get_template_directory_uri() . '/assets/js/npm.js');
+    wp_register_script('script-js', get_template_directory_uri() . '/assets/js/script.js');
+
+    // wp_enqueue_scripts('bootstrap-js');
+    // wp_enqueue_scripts('npm-js');
+    // wp_enqueue_scripts('script-js');
 }
 add_action('wp_enqueue_scripts', 'bootstrap_scripts_enqueue', 80);
 
