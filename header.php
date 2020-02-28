@@ -9,10 +9,14 @@
 
     <title><?php bloginfo('name'); ?> <?php wp_title('-'); ?></title>
 
-    <!-- bloginfo() info : https://developer.wordpress.org/reference/functions/bloginfo/ -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css'>
+    
+    <!-- bloginfo() info : https://developer.wordpress.org/reference/functions/bloginfo/ -->
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    
     <?php wp_head(); ?>
 </head>
 
@@ -44,7 +48,8 @@
                 </button>
                 <div class="col-2">
                     
-                    <?php //echo the_custom_logo(); ?>
+                    <?php //echo the_custom_logo(); 
+                    ?>
                 </div>
                 <div class="col-2">
                     <a class="nav-item nav-hover text-decoration-none text-center font-color-dark" href="#">Accueil</a>
@@ -64,9 +69,9 @@
                 </div>
             </nav> -->
 
-            <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+            <nav class="navbar navbar-expand-md navbar-light bg-light p-0 m-0" role="navigation">
                 <div class="container">
-                    
+
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
