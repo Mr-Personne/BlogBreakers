@@ -32,7 +32,7 @@
                                 <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
                                 <p class="text-center"><?php the_excerpt(); ?></p>
                                 <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
-                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">Voir le projet</button></a>
                             </div>
                     <?php
                         endwhile;
