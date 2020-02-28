@@ -1,0 +1,28 @@
+.bg-gradiant{
+    background-image:url(../images/degradé.png);
+    background-position: center;
+   
+}
+
+.bg-gradiant2{
+    background-image:url(../images/degradé2.png);
+    background-position: center;
+}
+
+
+.bg-avatar{
+    background-image: url(../images/franck.png);
+background-position: center;
+background-repeat: no-repeat;
+width: 100vw;
+height: 400px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.font-titre-avatar{
+    font-size: 3rem;
+}
+

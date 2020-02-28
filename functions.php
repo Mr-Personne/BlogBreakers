@@ -13,7 +13,7 @@ add_action('init', 'register_blogBreakers_menus');
 // https://www.wpbeginner.com/beginners-guide/how-to-add-featured-image-or-post-thumbnails-in-wordpress/
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
-    set_post_thumbnail_size(250, 250);
+    // set_post_thumbnail_size(250, 250);
     add_theme_support('post-thumbnails', array('page'));
     add_theme_support('post-thumbnails', array('post'));
     add_theme_support('post-thumbnails', array('your-post-type-name'));
@@ -29,13 +29,17 @@ if (function_exists('add_theme_support')) {
 function bootstrap_scripts_enqueue()
 {
     // all styles
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.css');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css');
+
     wp_enqueue_style('blogBreakers-style', get_stylesheet_uri());
 
     // all scripts
     // wp_enqueue_script( 'jquery-3-js', get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js');
     // wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.js');
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/npm.js');
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/script.js');
 }
 add_action('wp_enqueue_scripts', 'bootstrap_scripts_enqueue', 80);
 
@@ -46,12 +50,40 @@ function footer_widgets_init()
 
     register_sidebar(array(
 
-        'name' => 'Widget du footer',
-        'id' => 'new-widget-area',
-        'before_widget' => '<div class="nwa-widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2 class="nwa-title">',
-        'after_title' => '</h2>',
+        'name' => 'Widget du footer 1',
+        'id' => 'widget-area-1',
+        'before_widget' => '<p>',
+        'after_widget' => '</p>',
+        'before_title' => '<h3 class="footer-email">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
+
+        'name' => 'Widget du footer 2',
+        'id' => 'widget-area-2',
+        'before_widget' => '<p>',
+        'after_widget' => '</p>',
+        'before_title' => '<h3 class="footer-telephone">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
+
+        'name' => 'Widget du footer 3',
+        'id' => 'widget-area-3',
+        'before_widget' => '<p>',
+        'after_widget' => '</p>',
+        'before_title' => '<h3 class="footer-adresse">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
+
+        'name' => 'Widget du footer - Auteur',
+        'id' => 'widget-area-auteur',
+        'before_widget' => '<p class="text-center font-weight-bold">',
+        'after_widget' => '</p>',
     ));
 }
 
