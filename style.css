@@ -33,6 +33,25 @@ body{
     height: 150px;
     width: 100%;
 }
+
+/* wp-nav-menu */
+.wp-nav-menu li{
+    margin-left: 100px;
+    color: var(--font-color) !important;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.nav-link{
+    height: 200px;
+    /* width: 150px; */
+}
+.nav-link:hover{
+    border-bottom: 10px solid orangered;
+    background-color: rgb(214, 134, 64);
+}
+/* fin wp-nav-menu */
 /* FIN section sacha */
 
 
