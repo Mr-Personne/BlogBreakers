@@ -77,7 +77,37 @@ header{
 
 
 /* section franck */
+.bg-gradiant{
+    background-image:url(../blogbreakers/assets/images/degradé.png);
+    background-position: center;
+   
+}
 
+.bg-gradiant2{
+    background-image:url(../blogbreakers/assets/images/degradé2.png);
+    background-position: center;
+}
+
+
+.bg-avatar{
+background-image: url(../images/franck.png);
+background-position: center;
+background-repeat: no-repeat;
+width: 100vw;
+height: 400px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.font-titre-avatar{
+    font-size: 3rem;
+}
+
+.modal-dialog{
+    max-width: none;
+}
 /* FIN section franck */
 
 
@@ -261,6 +291,10 @@ header{
     margin-left: 10px;
   }
   
+.modal-dialog{
+    max-width: none;
+}
+
 /* FIN section notre équipe */
 
 
