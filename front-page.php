@@ -289,10 +289,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 justify-content-around d-flex pt-5">
-                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook">
-                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/twitter-logo.png" alt="logo-twitter">
-                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin">
-                        <img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github">
+                        <a href="https://fr-fr.facebook.com/AccessCodeSchool/"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
+                        <a href="https://twitter.com/accesscodeofp?lang=fr"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/twitter-logo.png" alt="logo-twitter"></a>
+                        <a href="https://www.linkedin.com/school/access-code-school/"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin"></a>
+                        <a href="https://github.com/AccessCodeSchool"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github"></a>
                     </div>
                 </div>
             </div>
@@ -304,6 +304,10 @@
 
     <!-- section carte -->
     <?php
+    // if (  ) {
+    //     echo "looooooooooooool";
+    // }
+    // echo is_plugin_active('blogmap/index.php');
     $longi = 6.1518422;
     $lati = 47.6369051;
     ?>
