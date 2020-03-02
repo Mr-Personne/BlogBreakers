@@ -224,6 +224,13 @@
     
     /* Partie présentation */
     
+    .h4, h4 {
+        font-size: 1rem;
+    }
+    
+    .img-avatar{
+    width: 40%;
+    }
     
     /* Fin présentation */
     }
