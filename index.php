@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
 <main>
     <section class="mt-10">
@@ -57,8 +57,13 @@
 
             endwhile;
         else :
-
-            echo "<p>Sorry, there are no posts to display.</p>";
+            ?>
+            <div class="container-fluid pt-120px mb-5 pb-120px bg-article d-flex pr-0">
+                <div class="container">
+                    <p class="text-center">Sorry, there are no posts to display.</p>
+                </div>
+            </div>
+            <?php
 
         endif;
         ?>
