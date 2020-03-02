@@ -289,10 +289,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 justify-content-around d-flex pt-5">
-                        <a href="https://fr-fr.facebook.com/AccessCodeSchool/"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
-                        <a href="https://twitter.com/accesscodeofp?lang=fr"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/twitter-logo.png" alt="logo-twitter"></a>
-                        <a href="https://www.linkedin.com/school/access-code-school/"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin"></a>
-                        <a href="https://github.com/AccessCodeSchool"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github"></a>
+                        <a href="https://fr-fr.facebook.com/AccessCodeSchool/" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
+                        <a href="https://twitter.com/accesscodeofp?lang=fr" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/twitter-logo.png" alt="logo-twitter"></a>
+                        <a href="https://www.linkedin.com/school/access-code-school/" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin"></a>
+                        <a href="https://github.com/AccessCodeSchool" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github"></a>
                     </div>
                 </div>
             </div>
