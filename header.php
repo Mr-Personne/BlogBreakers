@@ -41,7 +41,7 @@
     </header> -->
 
     <header>
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
             <!-- <nav class="navbar navbar-expand-lg font-montserrat text-decoration-none">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,7 @@
             </nav> -->
 
             <nav class="navbar navbar-expand-md navbar-light bg-light p-0 m-0" role="navigation">
-                <div class="container">
+                <!-- <div class="container"> -->
 
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,14 +82,14 @@
                         'theme_location'    => 'primary',
                         'depth'             => 2,
                         'container'         => 'div',
-                        'container_class'   => 'collapse navbar-collapse',
+                        'container_class'   => 'collapse navbar-collapse justify-content-end',
                         'container_id'      => 'bs-example-navbar-collapse-1',
-                        'menu_class'        => 'nav navbar-nav wp-nav-menu justify-content-between',
+                        'menu_class'        => 'nav navbar-nav wp-nav-menu',
                         'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                         'walker'            => new WP_Bootstrap_Navwalker(),
                     ));
                     ?>
-                </div>
+                <!-- </div> -->
             </nav>
         </div>
     </header>
