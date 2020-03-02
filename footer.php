@@ -1,4 +1,4 @@
-        <footer>
+        <footer id="contact">
             <div class="container-fluid">
                 <div class="container pt-5 pb-5">
                     <div class="row justify-content-between align-items-center">
