@@ -74,9 +74,11 @@
         // print_r($idArray);
         ?>
 
+        <h2 class="font-bernadette text-center display-4">Notre Équipe</h2>
         <div class="container-fluid demo">
             <div class="container">
                 <div class="row">
+                    
                     <div id="testimonial-slider" class="owl-carousel">
 
                         <?php
