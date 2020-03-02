@@ -26,3 +26,6 @@ height: 400px;
     font-size: 3rem;
 }
 
+.modal-dialog{
+    max-width: none;
+}
