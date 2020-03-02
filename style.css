@@ -131,7 +131,7 @@ header{
     border: 0px;
     transition: all 0.3s ease 0s;
     background: rgb(248,126,71);
-    background: linear-gradient(90deg, rgba(248,126,71,1) 0%, rgba(52,58,64,1) 50%, rgba(74,84,148,1) 100%);
+    background: linear-gradient(90deg, #de813c, #de813c 30%, #3f519a 80%, #3f519a);
 }
 .radius-border{
     border-radius: 10px;
