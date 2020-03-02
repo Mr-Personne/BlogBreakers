@@ -6,7 +6,7 @@
         <div class="container-fluid bg-header mb-350px">
             <div class="container">
                 <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
-                <div class="row justify-content-around">
+                <div id="projets" class="row justify-content-around">
                     <?php
                     $args = array(
                         'post_type' => 'projets',
@@ -46,7 +46,7 @@
 
     <!-- section DEPRESSION -->
     <!-- section notre équipe -->
-    <section>
+    <section id="equipe">
         <?php
         $args = array(
             'post_type' => 'equipiers',
@@ -102,7 +102,7 @@
     <!-- FIN section DEPRESSION (pas vraiment...) -->
 
     <!-- section Articles -->
-    <section class="mt-10">
+    <section id="blog" class="mt-10">
         <?php
 
         if (have_posts()) :
@@ -172,7 +172,7 @@
 
 
     <!-- section "Get in touch" (logos reseaux sociaux) -->
-    <section>
+    <section id="get-in-touch">
 
         <div class="container-fluid getintouch">
 
@@ -202,7 +202,7 @@
     $longi = 6.1518422;
     $lati = 47.6369051;
     ?>
-    <section>
+    <section id="map">
         <?php echo do_shortcode("[blogMap longitude='" . $longi . "' latitude='" . $lati . "']"); ?>
     </section>
     <!-- FIN section carte -->
