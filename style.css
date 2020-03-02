@@ -16,6 +16,9 @@
 
 
 /* section sacha */
+html{
+    scroll-behavior: smooth;
+}
 main {
     overflow-x: hidden;
 }
@@ -23,6 +26,7 @@ main {
 body{
     background-color: black;
     color: rgb(0, 0, 0);
+    
 }
 
 .bg-default{
@@ -35,20 +39,27 @@ body{
 }
 
 /* wp-nav-menu */
+header{
+    /* position: fixed; */
+    z-index: 10000000000000;
+    width: 100%;
+}
 .wp-nav-menu li{
-    margin-left: 100px;
     color: var(--font-color) !important;
     text-decoration: none;
     text-align: center;
+    font-size: 25px;
 
 }
 
 .nav-link{
     height: 100px;
-    width: 150px;
+    width: 250px;
+    overflow-y: hidden;
 }
 .nav-link:hover{
     border-bottom: 10px solid orangered;
+    color: orangered !important;
     background-color: rgb(255, 237, 223);
 }
 /* fin wp-nav-menu */
