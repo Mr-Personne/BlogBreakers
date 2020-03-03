@@ -198,7 +198,7 @@
                                                 <div class="col-6 bg-gradiant">
                                                     <h4 class="text-center text-white pb-3 pt-3">Social Media</h4>
                                                     <div class="row flex-column align-items-center">
-                                                        <a class="pb-4" href="https://www.facebook.com/AccessCodeSchool/?ref=br_rs" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
+                                                        <a class="pb-4" href="<?php echo $current_facebookLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
                                                         <a class="pb-4" href="<?php echo $current_linkedinLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin"></a>
                                                         <a class="pb-4" href="<?php echo $current_githubLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github"></a>
                                                     </div>
