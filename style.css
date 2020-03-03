@@ -128,7 +128,7 @@ height: 400px;
     background-image: url(assets/images/gitbreakers-bg-header.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 110vh;
+    /* height: 50vh; */
 }
 .bg-automotive{
     background-image: url(assets/images/auto-mockup.png);
