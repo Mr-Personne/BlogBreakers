@@ -78,7 +78,7 @@
         <div class="container-fluid demo">
             <div class="container">
                 <div class="row">
-                    
+
                     <div id="testimonial-slider" class="owl-carousel">
 
                         <?php
@@ -304,16 +304,22 @@
 
     <!-- section carte -->
     <?php
-    // if (  ) {
-    //     echo "looooooooooooool";
-    // }
-    // echo is_plugin_active('blogmap/index.php');
-    $longi = 6.1518422;
-    $lati = 47.6369051;
+    require_once 'wp-admin/includes/plugin.php';
+    if (is_plugin_active('blogmap/index.php')) {
+        $longi = 6.1518422;
+        $lati = 47.6369051;
     ?>
-    <section id="map">
-        <?php echo do_shortcode("[blogMap longitude='" . $longi . "' latitude='" . $lati . "']"); ?>
-    </section>
+
+
+
+
+        <section id="map">
+            <?php echo do_shortcode("[blogMap longitude='" . $longi . "' latitude='" . $lati . "']"); ?>
+        </section>
+
+    <?php
+    }
+    ?>
     <!-- FIN section carte -->
 
 
@@ -326,7 +332,7 @@
 
 
     <!-- section franck -->
-    
+
     <!-- FIN section franck -->
 
 
