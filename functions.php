@@ -343,6 +343,9 @@ function equipiers_build_meta_box($post)
 
     // retrieve the _equipiers_linkedin current value
     $current_linkedin = get_post_meta($post->ID, '_equipiers_linkedin', true);
+
+    // retrieve the _equipiers_facebook current value
+    $current_facebook = get_post_meta($post->ID, '_equipiers_facebook', true);
 ?>
     <div class='inside'>
         <h3><?php _e('Nom', 'equipiers_example_plugin'); ?></h3>
@@ -373,6 +376,12 @@ function equipiers_build_meta_box($post)
         <h3><?php _e('Lien LinkedIn', 'equipiers_example_plugin'); ?></h3>
         <p>
             <input type="text" name="lien-linkedin" value="<?php echo $current_linkedin ?>" />
+        </p>
+    </div>
+    <div class='inside'>
+        <h3><?php _e('Lien Facebook', 'equipiers_example_plugin'); ?></h3>
+        <p>
+            <input type="text" name="lien-facebook" value="<?php echo $current_facebook ?>" />
         </p>
     </div>
 <?php
@@ -427,6 +436,11 @@ function equipiers_save_meta_boxes_data($post_id)
     // _equipiers_lien-linkedin string
     if (isset($_REQUEST['lien-linkedin'])) {
         update_post_meta($post_id, '_equipiers_linkedin', sanitize_text_field($_POST['lien-linkedin']));
+    }
+
+    // _equipiers_lien-facebook string
+    if (isset($_REQUEST['lien-facebook'])) {
+        update_post_meta($post_id, '_equipiers_facebook', sanitize_text_field($_POST['lien-facebook']));
     }
 }
 add_action('save_post_equipiers', 'equipiers_save_meta_boxes_data');
