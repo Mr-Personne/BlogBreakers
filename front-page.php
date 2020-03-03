@@ -56,6 +56,7 @@
 
         $idArray = array();
         $thumbnailsArray = array();
+        $excerptArray = array();
 
         $my_query = new WP_Query($args);
 
@@ -65,6 +66,11 @@
                 array_push($idArray, get_the_ID());
                 if (get_the_post_thumbnail()) {
                     $thumbnailsArray[get_the_ID()] = get_the_post_thumbnail_url();
+                }
+
+                if (get_the_excerpt()) {
+                    // echo "loooool";
+                    $excerptArray[get_the_ID()] = get_the_excerpt();
                 }
 
 
@@ -129,12 +135,14 @@
 
         <?php
         // print_r($thumbnailsArray);
+        // print_r($excerptArray);
         foreach ($idArray as $id) {
             $current_prenom = get_post_meta($id, '_equipiers_prenom', true);
             $current_nom = get_post_meta($id, '_equipiers_nom', true);
             $current_sousTitre = get_post_meta($id, '_equipiers_sous_titre', true);
             $current_githubLink = get_post_meta($id, '_equipiers_github', true);
             $current_linkedinLink = get_post_meta($id, '_equipiers_linkedin', true);
+            $current_facebookLink = get_post_meta($id, '_equipiers_facebook', true);
         ?>
             <!-- Modal -->
             <div class="modal fade" id="Modal-<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -155,8 +163,17 @@
                                         <div class="col-4 bg-gradiant2 text-white">
                                             <h1 class="font-bernadette font-titre-avatar text-center  pb-3 pt-3"><?php echo $current_prenom . " " . $current_nom; ?></h1>
                                             <h4 class="font-montserrat text-center pb-3 "><?php echo $current_sousTitre; ?></h4>
-                                            <p class="font-montserrat pr-1">J'ai intégré la formation de designer web a
-                                                l'acs de vesoul afin de devenir developpeur web.</p>
+                                            <?php if (isset($excerptArray[$id])) {
+                                            ?>
+                                                <p class="font-montserrat pr-1"><?php echo $excerptArray[$id] ?></p>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <p class="font-montserrat pr-1">J'ai intégré la formation de designer web a
+                                                    l'acs de vesoul afin de devenir developpeur web.</p>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="col-8">
                                             <div class="row justify-content-center">
@@ -181,7 +198,7 @@
                                                 <div class="col-6 bg-gradiant">
                                                     <h4 class="text-center text-white pb-3 pt-3">Social Media</h4>
                                                     <div class="row flex-column align-items-center">
-                                                        <a class="pb-4" href="https://www.facebook.com/AccessCodeSchool/?ref=br_rs" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
+                                                        <a class="pb-4" href="<?php echo $current_facebookLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
                                                         <a class="pb-4" href="<?php echo $current_linkedinLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/linkedin-logo.png" alt="logo-linkedin"></a>
                                                         <a class="pb-4" href="<?php echo $current_githubLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/github-logo.png" alt="logo-github"></a>
                                                     </div>
