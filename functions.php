@@ -50,7 +50,7 @@ function bootstrap_scripts_enqueue()
     // wp_enqueue_scripts('npm-js');
     // wp_enqueue_scripts('script-js');
 }
-add_action('wp_enqueue_scripts', 'bootstrap_scripts_enqueue', 80);
+// add_action('wp_enqueue_scripts', 'bootstrap_scripts_enqueue', 80);
 
 
 
