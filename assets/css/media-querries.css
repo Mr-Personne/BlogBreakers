@@ -44,143 +44,10 @@
 /* Fin présentation */
 }
 
-/* // Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    /* Header */
-    
-    
-    /* fin header */
-    
-    
-    
-    /* section notre équipe */
-    
-    /* FIN section notre équipe */
-    
-    
-    
-    
-    /* section Articles */
-    
-    /* FIN section Articles */
-    
-    
-    
-    
-    /* section carte */
-    
-    /* FIN section carte */
-    
-    
-    
-    /* section "Get in touch" (logos reseaux sociaux) */
-    
-    
-    /* FIN section "Get in touch" (logos reseaux sociaux) */
-    
-    
-    
-    /* section footer */
-    
-    /* FIN section footer */
-    
-    /* Partie présentation */
-    
-    
-    /* Fin présentation */
-    }
-    
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    /* Header */
-    
-    
-    /* fin header */
-    
-    
-    
-    /* section notre équipe */
-    
-    /* FIN section notre équipe */
-    
-    
-    
-    
-    /* section Articles */
-    
-    /* FIN section Articles */
-    
-    
-    
-    
-    /* section carte */
-    
-    /* FIN section carte */
-    
-    
-    
-    /* section "Get in touch" (logos reseaux sociaux) */
-    
-    
-    /* FIN section "Get in touch" (logos reseaux sociaux) */
-    
-    
-    
-    /* section footer */
-    
-    /* FIN section footer */
-    
-    /* Partie présentation */
-    
-    
-    /* Fin présentation */
-    }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    /* Header */
     
-    
-    /* fin header */
-    
-    
-    
-    /* section notre équipe */
-    
-    /* FIN section notre équipe */
-    
-    
-    
-    
-    /* section Articles */
-    
-    /* FIN section Articles */
-    
-    
-    
-    
-    /* section carte */
-    
-    /* FIN section carte */
-    
-    
-    
-    /* section "Get in touch" (logos reseaux sociaux) */
-    
-    
-    /* FIN section "Get in touch" (logos reseaux sociaux) */
-    
-    
-    
-    /* section footer */
-    
-    /* FIN section footer */
-    
-    /* Partie présentation */
-    
-    
-    /* Fin présentation */
-    }
+
+
 
     /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -228,4 +95,141 @@
     /* Fin présentation */
     }
     
+    /* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Header */
+    
+    
+    /* fin header */
+    
+    
+    
+    /* section notre équipe */
+    
+    /* FIN section notre équipe */
+    
+    
+    
+    
+    /* section Articles */
+    
+    /* FIN section Articles */
+    
+    
+    
+    
+    /* section carte */
+    
+    /* FIN section carte */
+    
+    
+    
+    /* section "Get in touch" (logos reseaux sociaux) */
+    
+    
+    /* FIN section "Get in touch" (logos reseaux sociaux) */
+    
+    
+    
+    /* section footer */
+    
+    /* FIN section footer */
+    
+    /* Partie présentation */
+    
+    
+    /* Fin présentation */
+    }
+
+    /* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Header */
+    
+    
+    /* fin header */
+    
+    
+    
+    /* section notre équipe */
+    
+    /* FIN section notre équipe */
+    
+    
+    
+    
+    /* section Articles */
+    
+    /* FIN section Articles */
+    
+    
+    
+    
+    /* section carte */
+    
+    /* FIN section carte */
+    
+    
+    
+    /* section "Get in touch" (logos reseaux sociaux) */
+    
+    
+    /* FIN section "Get in touch" (logos reseaux sociaux) */
+    
+    
+    
+    /* section footer */
+    
+    /* FIN section footer */
+    
+    /* Partie présentation */
+    
+    
+    /* Fin présentation */
+    }
+
+    /* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Header */
+    
+    
+    /* fin header */
+    
+    
+    
+    /* section notre équipe */
+    
+    /* FIN section notre équipe */
+    
+    
+    
+    
+    /* section Articles */
+    
+    /* FIN section Articles */
+    
+    
+    
+    
+    /* section carte */
+    
+    /* FIN section carte */
+    
+    
+    
+    /* section "Get in touch" (logos reseaux sociaux) */
+    
+    
+    /* FIN section "Get in touch" (logos reseaux sociaux) */
+    
+    
+    
+    /* section footer */
+    
+    /* FIN section footer */
+    
+    /* Partie présentation */
+    
+    
+    /* Fin présentation */
+    }
     
