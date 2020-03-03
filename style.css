@@ -24,7 +24,7 @@ main {
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     color: rgb(0, 0, 0);
     
 }
@@ -128,7 +128,7 @@ height: 400px;
     background-image: url(assets/images/gitbreakers-bg-header.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 50vh; */
+    height: 110vh;
 }
 .bg-automotive{
     background-image: url(assets/images/auto-mockup.png);
