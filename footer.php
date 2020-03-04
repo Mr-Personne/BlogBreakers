@@ -1,7 +1,7 @@
         <footer id="contact">
             <div class="container-fluid">
                 <div class="container pt-5 pb-5">
-                    <div class="row justify-content-between">
+                    <div class="reglage justify-content-between">
 
                         <div class="col-12 col-sm-12 col-md-3 col-lg-3">
                             <!-- ajout de ma nouvelle widget area -->
