@@ -440,6 +440,33 @@ height: 400px;
 
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+
+    /* section header  */
+    .navbar-toggler {
+        margin-left: 20px;
+    }
+
+    .nav-link {
+        width: 100%;
+    }
+    .custom-background {
+        background-position: 0px 100px !important;
+    }
+
+    .gitbreakers-h1 {
+        font-size: 2rem;
+    }
+
+    .shadow-lg {
+        margin-bottom: 40px;
+    }
+
+    .mb-350px {
+        margin-bottom: 20px;
+    }
+    /* FIN section header */
+
+    
     /* section article */
     .container-fluid.mb-5.mt-10.d-flex.pr-0.pl-0 {
         display: flex;
@@ -470,4 +497,40 @@ height: 400px;
         font-size: 3.5rem;
     }
     /* FIN section article  */
+
+    /* section footer */
+    h3.footer-email {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-email::before {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    h3.footer-telephone {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-telephone::before {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    h3.footer-adresse {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-adresse::before {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    .textwidget {
+        margin-bottom: 20px;
+    }
+    /* FIN section footer */
  }

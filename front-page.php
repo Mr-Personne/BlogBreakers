@@ -159,8 +159,8 @@
 
                             <div class="container fluid">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col-4 bg-gradiant2 text-white">
+                                    <div class="row flex-column flex-md-row flex-lg-row">
+                                        <div class="col-12 col-md-4 col-lg-4 bg-gradiant2 text-white">
                                             <h1 class="font-bernadette font-titre-avatar text-center  pb-3 pt-3"><?php echo $current_prenom . " " . $current_nom; ?></h1>
                                             <h4 class="font-montserrat text-center pb-3 "><?php echo $current_sousTitre; ?></h4>
                                             <?php if (isset($excerptArray[$id])) {
@@ -175,9 +175,9 @@
                                             }
                                             ?>
                                         </div>
-                                        <div class="col-8">
-                                            <div class="row justify-content-center">
-                                                <div class="col-6 d-flex justify-content-center">
+                                        <div class="col-12 col-md-8 col-lg-8">
+                                            <div class="row  flex-column flex-md-row flex-lg-row justify-content-center">
+                                                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center p-0">
                                                     <?php if (isset($thumbnailsArray[$id])) {
                                                     ?>
 
@@ -195,7 +195,7 @@
 
 
                                                 </div>
-                                                <div class="col-6 bg-gradiant">
+                                                <div class="col-12 col-md-6 col-lg-6 bg-gradiant">
                                                     <h4 class="text-center text-white pb-3 pt-3">Social Media</h4>
                                                     <div class="row flex-column align-items-center">
                                                         <a class="pb-4" href="<?php echo $current_facebookLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
