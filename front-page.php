@@ -249,7 +249,7 @@
                                     <div class="content-box">
                                         <?php the_content(); ?>
                                     </div>
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5 mb-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                                 </div>
 
 
