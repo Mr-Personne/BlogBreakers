@@ -82,9 +82,11 @@
 
 /* section notre équipe */
 .bg-grid{
-  background-color: antiquewhite;
+  background-color: #f4f4f4;
+
 
 }
+
 .testimonial {
   /* background-color: white; */
   text-align: center;
@@ -203,7 +205,7 @@
 }
 
 .pt-120px{
-    padding-top: 120px;
+    padding-top: 581px;
 }
 /* FIN section Articles */
 

@@ -24,7 +24,7 @@ main {
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     color: rgb(0, 0, 0);
     
 }
@@ -432,8 +432,52 @@ height: 400px;
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-    /* ... */
- }
+    .reglage {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: 61px;
+    }
+    .navbar-light .navbar-toggler {
+        color: rgba(0,0,0,.5);
+        border-color: rgba(0,0,0,.1);
+        margin-right: 43px;
+        transform: translate(27px, -10px);
+    }
+ 
+ .custom-logo{
+    vertical-align: middle;
+    border-style: none;
+    transform: translate(-13px, -7px);
+   
+}
+ .gitbreakers-h1 {
+        font-size: 5rem;
+        padding-top: 20%;
+        padding-bottom: 30%;
+    }
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        
+        margin: auto;
+    }
+    .no-gutter {
+        padding-left: 5px;
+        padding-right: 7px;
+        margin: 10px;
+    }
+    .mb-350px {
+        margin-bottom: 194px;
+    }
+    .pl-200px {
+        padding-left: 20px;
+    }
+    .container-fluid.mb-5.mt-10.d-flex.pr-0.pl-0 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
