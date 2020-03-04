@@ -64,7 +64,6 @@ header{
 }
 /* fin wp-nav-menu */
 
-
 .mb-350px{
     margin-bottom: 420px;
 }
@@ -125,10 +124,10 @@ height: 400px;
     font-family: 'bernadette-webfont';
 }
 .bg-header{
-    background-image: url(assets/images/gitbreakers-bg-header.png);
+    
     background-repeat: no-repeat;
     background-size: cover;
-    height: 110vh;
+  
 }
 .bg-automotive{
     background-image: url(assets/images/auto-mockup.png);
@@ -153,7 +152,8 @@ height: 400px;
 }
 .gitbreakers-h1{
     font-size: 6rem;
-    padding-top: 20%;
+    padding-top: 8% !important;
+    text-shadow: 1px 1px 2px black;
     padding-bottom: 30%;
 }
 .btn-primary {
@@ -427,7 +427,9 @@ height: 400px;
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-    /* ... */
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        margin: 0 auto;
+    }
  }
 
 /* // Extra small devices (portrait phones, less than 576px) */
