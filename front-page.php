@@ -20,7 +20,7 @@
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
                     ?>
-                            <div class="col-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                            <div class="col-12 col-md-3 col-lg-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
                                 <div class="bg-default radius-border-top">
                                     <?php
                                     if (has_post_thumbnail()) {
