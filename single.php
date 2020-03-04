@@ -25,8 +25,8 @@
                         <div class="container">
                             <div class="row">
 
-                                <div class="col-12 pl-200px">
-                                    <div class="bg-thumbnail"><?php echo '<img src="' . $image_src[0]  . '" width="100%" height="100%" />'; ?></div>
+                                <div class="col-12 pl-200px p-single">
+                                    <div class="bg-thumbnail bg-thumbnail-single"><?php echo '<img src="' . $image_src[0]  . '" width="100%" height="100%" />'; ?></div>
                                     <h3 class="font-bernadette display-4 mb-5"><?php the_title(); ?></h3>
                                     <div class="">
                                         <?php the_content(); ?>

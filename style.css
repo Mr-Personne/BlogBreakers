@@ -536,5 +536,17 @@ height: 400px;
     .textwidget {
         margin-bottom: 20px;
     }
+
+
+    /* section single article */
+    .p-single {
+        padding-left: 0px;
+        padding-top: 50px;
+    }
+
+    .bg-thumbnail-single {
+        width: 100%;
+        height: 20%;
+    }
     /* FIN section footer */
  }
