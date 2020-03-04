@@ -182,10 +182,10 @@ height: 400px;
     border-bottom: 10px #f87e47 solid;
     padding-bottom: 33px;
 }
-.col-30-projet{
+/* .col-30-projet{
     flex: 0 0 30%;
     max-width: 30%;
-}
+} */
 
 
 /* FIN section glenn */
@@ -443,6 +443,12 @@ height: 400px;
         display: flex;
         flex-direction: column-reverse;
     }
+
+    /* .col-30-projet {
+        flex: none;
+        max-width: none;
+        margin-bottom: 45px;
+    } */
 
 
     .bg-thumbnail {
