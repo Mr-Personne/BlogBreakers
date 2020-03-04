@@ -69,7 +69,7 @@
                     <div class="container-fluid mb-5 pb-120px bg-article pr-0">
                         <div class="container">
                             <div class="row">
-                                <div class="col-12 pl-200px pr-200px">
+                                <div class="col-12 pl-200px pr-200px p-single">
                                     <h3 class="font-bernadette display-2 mb-5"><?php the_title(); ?></h3>
                                     <div class="">
                                         <?php the_content(); ?>
