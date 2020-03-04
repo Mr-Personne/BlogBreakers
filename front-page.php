@@ -20,7 +20,7 @@
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
                     ?>
-                            <div class="col-12 col-md-3 col-lg-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                            <div class="col-12 col-md-3 col-30-projet d-flex flex-column align-items-center bg-white no-gutter radius-border projet shadow-lg">
                                 <div class="bg-default radius-border-top">
                                     <?php
                                     if (has_post_thumbnail()) {
@@ -30,7 +30,7 @@
                                     ?>
                                 </div>
                                 <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
-                                <p class="text-center"><?php the_excerpt(); ?></p>
+                                <div class="px-2"><?php the_excerpt(); ?></div>
                                 <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
                                 <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">Voir le projet</button></a>
                             </div>
