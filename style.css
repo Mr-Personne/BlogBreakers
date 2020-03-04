@@ -500,6 +500,12 @@ height: 400px;
     .display-2 {
         font-size: 3.5rem;
     }
+
+    .content-box {
+        height: 250px;
+        overflow-y: hidden;
+        width: 270px;
+    }
     /* FIN section article  */
 
     /* section footer */
