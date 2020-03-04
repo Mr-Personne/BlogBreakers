@@ -3,7 +3,7 @@
 <main>
     <!-- section sacha -->
     <section>
-        <div class="container-fluid bg-header mb-350px">
+        <div id="projets-container" class="container-fluid mb-350px">
             <div class="container">
                 <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
                 <div id="projets" class="row justify-content-around">
@@ -20,7 +20,7 @@
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
                     ?>
-                            <div class="col-30-projet d-flex flex-column align-items-center bg-white no-gutter radius-border projet shadow-lg">
+                            <div class="col-12 col-md-3 col-lg-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
                                 <div class="bg-default radius-border-top">
                                     <?php
                                     if (has_post_thumbnail()) {
@@ -30,9 +30,9 @@
                                     ?>
                                 </div>
                                 <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
-                                <div class="px-4"><?php the_excerpt(); ?></div>
+                                <p class="text-center"><?php the_excerpt(); ?></p>
                                 <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
-                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2 mb-4" data-toggle="button" aria-pressed="false">Voir le projet</button></a>
+                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">Voir le projet</button></a>
                             </div>
                     <?php
                         endwhile;
@@ -249,7 +249,7 @@
                                     <div class="content-box">
                                         <?php the_content(); ?>
                                     </div>
-                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5 mb-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                                 </div>
 
 
@@ -266,11 +266,11 @@
                     <div class="container-fluid mb-5 pb-5 mt-10 bg-article d-flex pr-0 pl-0">
                         <div class="row">
                             <div class="col-12 pl-200px pr-200px">
-                                <h3 class="font-bernadette display-4 mb-5"><?php the_title(); ?></h3>
+                                <h3 class="font-bernadette display-2 mb-5"><?php the_title(); ?></h3>
                                 <div class="content-box-full">
                                     <?php the_content(); ?>
                                 </div>
-                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5 mb-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">LIRE LA SUITE</button></a>
                             </div>
                         </div>
                     </div>
