@@ -3,7 +3,7 @@
 <main>
     <!-- section sacha -->
     <section>
-        <div id="projets-container" class="container-fluid mb-350px bg-header">
+        <div id="projets-container" class="container-fluid mb-100px bg-header">
             <div class="container">
                 <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
                 <div id="projets" class="row justify-content-around">
