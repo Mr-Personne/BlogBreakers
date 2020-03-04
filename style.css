@@ -427,6 +427,12 @@ height: 400px;
         flex: 0 0 30%;
         max-width: 30%;
     }
+
+    .container-fluid.mb-5.mt-10.d-flex.pr-0.pl-0 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
  }
 
 /* // Medium devices (tablets, 768px and up) */
