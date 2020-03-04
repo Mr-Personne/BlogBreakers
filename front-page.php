@@ -3,7 +3,7 @@
 <main>
     <!-- section sacha -->
     <section>
-        <div id="projets-container" class="container-fluid mb-350px">
+        <div id="projets-container" class="container-fluid mb-100px bg-header">
             <div class="container">
                 <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
                 <div id="projets" class="row justify-content-around">
@@ -20,7 +20,7 @@
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 
                     ?>
-                            <div class="col-12 col-md-5 col-lg-3 d-flex flex-column align-items-center bg-white no-gutter radius-border projet">
+                            <div class="col-12 col-md-5 col-30-projet d-flex flex-column align-items-center bg-white no-gutter radius-border projet shadow-lg">
                                 <div class="bg-default radius-border-top">
                                     <?php
                                     if (has_post_thumbnail()) {
@@ -30,9 +30,9 @@
                                     ?>
                                 </div>
                                 <h4 class="text-center font-weight-bold pt-3 pb-3"><?php the_title(); ?></h4>
-                                <p class="text-center"><?php the_excerpt(); ?></p>
+                                <div class="px-2"><?php the_excerpt(); ?></div>
                                 <?php $current_url = get_post_meta(get_the_ID(), '_projets_url', true); ?>
-                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2" data-toggle="button" aria-pressed="false">Voir le projet</button></a>
+                                <a href="<?php echo $current_url; ?>" target="_blank"><button type="button" class="btn btn-primary mt-2 mb-3" data-toggle="button" aria-pressed="false">Voir le projet</button></a>
                             </div>
                     <?php
                         endwhile;
@@ -159,8 +159,8 @@
 
                             <div class="container fluid">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col-4 bg-gradiant2 text-white">
+                                    <div class="row flex-column flex-md-row flex-lg-row">
+                                        <div class="col-12 col-md-4 col-lg-4 bg-gradiant2 text-white">
                                             <h1 class="font-bernadette font-titre-avatar text-center  pb-3 pt-3"><?php echo $current_prenom . " " . $current_nom; ?></h1>
                                             <h4 class="font-montserrat text-center pb-3 "><?php echo $current_sousTitre; ?></h4>
                                             <?php if (isset($excerptArray[$id])) {
@@ -175,9 +175,9 @@
                                             }
                                             ?>
                                         </div>
-                                        <div class="col-8">
-                                            <div class="row justify-content-center">
-                                                <div class="col-6 d-flex justify-content-center">
+                                        <div class="col-12 col-md-8 col-lg-8">
+                                            <div class="row  flex-column flex-md-row flex-lg-row justify-content-center">
+                                                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center p-0">
                                                     <?php if (isset($thumbnailsArray[$id])) {
                                                     ?>
 
@@ -195,7 +195,7 @@
 
 
                                                 </div>
-                                                <div class="col-6 bg-gradiant">
+                                                <div class="col-12 col-md-6 col-lg-6 bg-gradiant">
                                                     <h4 class="text-center text-white pb-3 pt-3">Social Media</h4>
                                                     <div class="row flex-column align-items-center">
                                                         <a class="pb-4" href="<?php echo $current_facebookLink; ?>" target="_blank"><img class="social-media" src="wp-content/themes/blogbreakers/assets/images/facebook-logo.png" alt="logo-facebook"></a>
