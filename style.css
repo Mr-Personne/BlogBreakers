@@ -446,13 +446,13 @@ height: 400px;
         transform: translate(27px, -10px);
     }
  
- .custom-logo{
+    .custom-logo{
     vertical-align: middle;
     border-style: none;
     transform: translate(-13px, -7px);
    
-}
- .gitbreakers-h1 {
+    }
+    .gitbreakers-h1 {
         font-size: 5rem;
         padding-top: 20%;
         padding-bottom: 30%;
@@ -475,6 +475,13 @@ height: 400px;
     .container-fluid.mb-5.mt-10.d-flex.pr-0.pl-0 {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    
+    .container {
+        max-width: none;
+        /* padding-right: 0; */
+        /* padding-left: 0; */
     }
 }
 
@@ -538,6 +545,16 @@ height: 400px;
 
     .display-2 {
         font-size: 3.5rem;
+    }
+
+    .content-box {
+        width: 550px;
+    }
+
+    .container {
+        max-width: none;
+        padding-right: 0;
+        padding-left: 0;
     }
     /* FIN section article  */
 
