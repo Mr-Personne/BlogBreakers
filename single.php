@@ -41,7 +41,7 @@
                                     <?php
                                     if ($prev_post) {
                                     ?>
-                                        <a href="<?php echo get_permalink($prev_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article "<?php echo wp_kses_post(get_the_title($prev_post->ID)); ?>"</button></a>
+                                        <a href="<?php echo get_permalink($prev_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article Précé.</button></a>
 
                                     <?php
                                     }
@@ -50,7 +50,7 @@
                                     ?>
 
 
-                                        <a href="<?php echo get_permalink($next_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article "<?php echo wp_kses_post(get_the_title($next_post->ID)); ?>"</button></a>
+                                        <a href="<?php echo get_permalink($next_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article Suiv.</button></a>
 
                                     <?php
                                     }
@@ -83,7 +83,7 @@
                                     if ($prev_post) {
                                     ?>
                                         <p class="text-left w-100">
-                                            <a href="<?php echo get_permalink($prev_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article "<?php echo wp_kses_post(get_the_title($prev_post->ID)); ?>"</button></a>
+                                            <a href="<?php echo get_permalink($prev_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article Précé.</button></a>
                                         </p>
                                     <?php
                                     }
@@ -92,7 +92,7 @@
                                     ?>
 
                                         <p class="text-right w-100">
-                                            <a href="<?php echo get_permalink($next_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article "<?php echo wp_kses_post(get_the_title($next_post->ID)); ?>"</button></a>
+                                            <a href="<?php echo get_permalink($next_post->ID); ?>" rel="bookmark" title="Link to <?php the_title(); ?>"><button type="button" class="btn btn-primary mt-5" data-toggle="button" aria-pressed="false">Article Suiv.</button></a>
                                         </p>
                                     <?php
                                     }
