@@ -5,7 +5,7 @@
     <section>
         <div id="projets-container" class="container-fluid mb-100px bg-header">
             <div class="container">
-                <div class="font-bernadette text-center text-white gitbreakers-h1">
+                <div class="font-bernadette text-center text-white">
                 <?php if (is_active_sidebar('widget-area-header')) : ?>
                     <?php dynamic_sidebar('widget-area-header'); ?>
                 <?php endif; ?>
