@@ -163,8 +163,18 @@ register_nav_menus( array(
 
 
 //widgets
-function footer_widgets_init()
+function widgets_init()
 {
+
+    register_sidebar(array(
+
+        'name' => 'Widget du header',
+        'id' => 'widget-area-header',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h1 class="gitbreakers-h1">',
+        'after_title' => '</h1>',
+    ));
 
     register_sidebar(array(
 
@@ -205,7 +215,7 @@ function footer_widgets_init()
     ));
 }
 
-add_action('widgets_init', 'footer_widgets_init');
+add_action('widgets_init', 'widgets_init');
 
 
 //custom post types

@@ -5,7 +5,11 @@
     <section>
         <div id="projets-container" class="container-fluid mb-100px bg-header">
             <div class="container">
-                <h1 class="font-bernadette text-center text-white gitbreakers-h1">GitBreakers the Best</h1>
+                <div class="font-bernadette text-center text-white gitbreakers-h1">
+                <?php if (is_active_sidebar('widget-area-header')) : ?>
+                    <?php dynamic_sidebar('widget-area-header'); ?>
+                <?php endif; ?>
+                </div>
                 <div id="projets" class="row justify-content-around">
                     <?php
                     $args = array(
