@@ -483,6 +483,10 @@ height: 400px;
         /* padding-right: 0; */
         /* padding-left: 0; */
     }
+
+    body.custom-background {
+        background-position: 0px 140px !important;
+    }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
